@@ -1,0 +1,1440 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ตรวจคำตอบ EASA Module 6 (B1) · ชุด 60 ข้อ</title>
+<meta name="description" content="ตรวจคำตอบ EASA Part-66 CAT B1 Module 6 Materials and Hardware ชุด 60 ข้อ เทียบกับหนังสือ พร้อมคำตอบที่ถูก คำอธิบาย และเลขหน้า">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%88%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light dark;
+  --paper:#F3F6FA; --surface:#FFFFFF; --ink:#14233A; --ink-2:#4A5A72; --line:#D9E0EA; --accent:#245FA8; --focus:#245FA8;
+  --ok:#17734A; --ok-bg:#E5F5EC; --ok-line:#BFE3CE;
+  --warn:#8A5A00; --warn-bg:#FFF2D4; --warn-line:#F0D9A0;
+  --bad:#B42318; --bad-bg:#FDE9E7; --bad-line:#F4C3BE;
+  --unk:#4A5A72; --unk-bg:#E7EBF1; --unk-line:#CBD3DE; --tag-bg:#E6EEF9; --tag-ink:#1B4F94;
+  --radius:12px;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#0D1625; --surface:#152237; --ink:#E8EEF7; --ink-2:#A8B6CB; --line:#2A3B56; --accent:#7DB0F5; --focus:#9CC4FA;
+    --ok:#76DBA6; --ok-bg:#12352A; --ok-line:#21553F;
+    --warn:#F3C96F; --warn-bg:#3A2E11; --warn-line:#5E4B1B;
+    --bad:#FF9E94; --bad-bg:#43201F; --bad-line:#6E3330;
+    --unk:#B9C5D8; --unk-bg:#243248; --unk-line:#3B4B66; --tag-bg:#1E3556; --tag-ink:#A9CBFA;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1rem/1.7 "IBM Plex Sans Thai","Noto Sans Thai",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;padding:0 1rem;padding-left:max(1rem,env(safe-area-inset-left));padding-right:max(1rem,env(safe-area-inset-right))}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:6px}
+button{font:inherit;color:inherit}
+
+.topnav{background:var(--surface);border-bottom:1px solid var(--line);padding:.55rem 0;padding-top:calc(.55rem + env(safe-area-inset-top))}
+.topnav .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem 1rem;font-size:.9375rem}
+.topnav a{color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;min-height:2.4rem;font-weight:500}
+.topnav a:hover{text-decoration:underline}
+.topnav .here{color:var(--ink);font-weight:600;min-height:2.4rem;display:inline-flex;align-items:center}
+.topnav .sep{flex:1}
+@media print{.topnav{display:none}}
+/* hero */
+.hero{padding:calc(2rem + env(safe-area-inset-top)) 0 1.25rem}
+h1{margin:0 0 .6rem;font-size:clamp(1.65rem,5.4vw,2.35rem);line-height:1.25;font-weight:600;letter-spacing:-.01em}
+.lead{margin:0 0 1.1rem;max-width:58ch;color:var(--ink-2)}
+.lead b{color:var(--ink);font-weight:600}
+.meter{display:flex;gap:3px;height:12px;margin:0 0 .7rem}
+.meter span{display:block;border-radius:99px;min-width:8px}
+.m-unk{background:#8A94A6} .m-bad{background:var(--bad)} .m-warn{background:#D99A1E} .m-ok{background:var(--ok)}
+@media (prefers-color-scheme:dark){.m-warn{background:#E0AC3A}}
+.legend{display:flex;flex-wrap:wrap;gap:.25rem 1.1rem;margin:0 0 1.1rem;padding:0;list-style:none;font-size:.9375rem;color:var(--ink-2)}
+.legend b{color:var(--ink);font-weight:600}
+.dot{display:inline-block;width:.65rem;height:.65rem;border-radius:50%;margin-right:.4rem}
+.dot.unk{background:#8A94A6} .dot.bad{background:var(--bad)} .dot.warn{background:#D99A1E} .dot.ok{background:var(--ok)}
+.fixfirst{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin:0}
+.fixfirst p{margin:0 .25rem 0 0;font-weight:500}
+.jump{display:inline-flex;align-items:center;justify-content:center;min-width:2.6rem;height:2.6rem;padding:0 .6rem;border-radius:99px;border:1px solid var(--bad-line);background:var(--bad-bg);color:var(--bad);font-weight:600;text-decoration:none;font-variant-numeric:tabular-nums}
+.jump:hover{border-color:var(--bad)}
+.howto{margin:1.1rem 0 0;color:var(--ink-2);font-size:.9375rem;max-width:62ch}
+
+/* toolbar */
+.toolbar{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);padding:.6rem 0 .65rem;padding-top:calc(.6rem + env(safe-area-inset-top))}
+.toolbar .wrap{display:flex;flex-direction:column;gap:.55rem}
+.search{position:relative}
+.search input{width:100%;height:2.9rem;padding:0 2.8rem 0 2.6rem;border:1px solid var(--line);border-radius:99px;background:var(--surface);color:var(--ink);font:inherit;font-size:1rem}
+.search input::placeholder{color:var(--ink-2)}
+.search svg.mag{position:absolute;left:.95rem;top:50%;width:1.15rem;height:1.15rem;margin-top:-.575rem;stroke:var(--ink-2);fill:none;stroke-width:2;stroke-linecap:round}
+.search .clear{position:absolute;right:.35rem;top:50%;width:2.2rem;height:2.2rem;margin-top:-1.1rem;border:0;border-radius:50%;background:transparent;cursor:pointer;display:none}
+.search .clear svg{width:1rem;height:1rem;stroke:var(--ink-2);fill:none;stroke-width:2.2;stroke-linecap:round}
+.search.has-text .clear{display:block}
+.chips{display:flex;gap:.35rem;overflow-x:auto;scrollbar-width:none;padding-bottom:1px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:1 1 auto;justify-content:center;height:2.4rem;padding:0 .6rem;border-radius:99px;border:1px solid var(--line);background:var(--surface);cursor:pointer;font-size:.9375rem;display:inline-flex;align-items:center;gap:.4rem;white-space:nowrap}
+.chip .c{font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.chip[aria-pressed="true"] .c{color:inherit;opacity:.8}
+
+@media (min-width:720px){.chip{flex:0 0 auto;padding:0 .95rem}}
+@media (max-width:480px){.chip{font-size:.875rem;padding:0 .5rem;gap:.3rem}.chips{gap:.3rem}}
+/* tools */
+.tools{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 1rem;padding:1rem 0 .6rem}
+.count{margin:0;color:var(--ink-2);font-size:.9375rem}
+.tool-row{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap}
+.switch{display:inline-flex;align-items:center;gap:.55rem;cursor:pointer;font-size:.9375rem;min-height:2.4rem}
+.switch input{position:absolute;opacity:0;width:1px;height:1px}
+.track{width:2.6rem;height:1.5rem;border-radius:99px;background:var(--line);position:relative;transition:background .15s}
+.track::after{content:"";position:absolute;top:.2rem;left:.2rem;width:1.1rem;height:1.1rem;border-radius:50%;background:var(--surface);box-shadow:0 0 0 1px rgba(20,35,58,.25);transition:transform .15s}
+.switch input:checked + .track{background:var(--accent)}
+.switch input:checked + .track::after{transform:translateX(1.1rem)}
+.switch input:focus-visible + .track{outline:3px solid var(--focus);outline-offset:2px}
+.linkbtn{border:0;background:none;padding:.4rem .2rem;color:var(--accent);cursor:pointer;font-weight:500;min-height:2.4rem}
+.linkbtn:hover{text-decoration:underline}
+
+/* list */
+.list{padding-bottom:1rem}
+.q{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);margin:0 0 .65rem;scroll-margin-top:9rem;box-shadow:inset 4px 0 0 var(--stripe,var(--line))}
+.q.bad{--stripe:var(--bad)} .q.warn{--stripe:#D99A1E} .q.ok{--stripe:var(--ok)} .q.unk{--stripe:#8A94A6}
+.q[hidden]{display:none}
+summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:2.2rem 1fr 1.5rem;gap:.5rem;align-items:start;padding:.95rem .9rem .95rem 1.1rem;border-radius:var(--radius)}
+summary::-webkit-details-marker{display:none}
+.num{font-weight:600;font-size:1.125rem;line-height:1.5;font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.main{display:flex;flex-direction:column;gap:.45rem;min-width:0}
+.qtext{font-weight:500;line-height:1.5}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .6rem}
+.badge{display:inline-flex;align-items:center;gap:.3rem;height:1.65rem;padding:0 .6rem 0 .4rem;border-radius:99px;font-size:.875rem;font-weight:500}
+.badge svg{width:1rem;height:1rem;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.badge.ok{background:var(--ok-bg);color:var(--ok)} .badge.warn{background:var(--warn-bg);color:var(--warn)} .badge.bad{background:var(--bad-bg);color:var(--bad)} .badge.unk{background:var(--unk-bg);color:var(--unk)}
+.tag{display:inline-flex;align-items:center;gap:.4rem;height:1.65rem;padding:0 .7rem 0 1.15rem;background:var(--tag-bg);color:var(--tag-ink);font-size:.875rem;font-weight:500;position:relative;clip-path:polygon(.55rem 0,100% 0,100% 100%,.55rem 100%,0 50%);font-variant-numeric:tabular-nums}
+.tag::before{content:"";position:absolute;left:.5rem;top:50%;width:.3rem;height:.3rem;margin-top:-.15rem;border-radius:50%;background:var(--paper)}
+.tag-x{font-weight:400;opacity:.85}
+.preview{color:var(--ink-2);font-size:.9375rem;line-height:1.55;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.preview .pl{color:var(--ok);font-weight:500}
+.chev{width:1.5rem;height:1.5rem;margin-top:.1rem;fill:none;stroke:var(--ink-2);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .15s}
+details[open] > summary .chev{transform:rotate(180deg)}
+details[open] > summary .preview{display:none}
+.body{padding:.2rem 1rem 1.1rem 1.1rem}
+.answers{display:grid;gap:.7rem}
+@media (min-width:720px){
+  .answers{grid-template-columns:1fr 1fr}
+  .body{padding-left:3.8rem}
+}
+.ans{border:1px solid var(--line);border-radius:10px;padding:.75rem .95rem .85rem}
+.ans h3,.why h3{margin:0 0 .3rem;font-size:.9375rem;font-weight:500;color:var(--ink-2)}
+.ans p,.ans .correct-body{margin:0;line-height:1.65}
+.ans.orig.bad{background:var(--bad-bg);border-color:var(--bad-line)}
+.ans.orig.warn{background:var(--warn-bg);border-color:var(--warn-line)}
+.ans.orig.unk{background:var(--unk-bg);border-color:var(--unk-line)}
+.note.unk{border-left-color:#8A94A6;background:var(--unk-bg)}
+.ans.correct{background:var(--ok-bg);border-color:var(--ok-line)}
+.ans.correct h3{color:var(--ok)}
+.ans.correct strong{font-weight:600}
+.hint{display:none!important}
+.why{margin-top:1rem}
+.why p{margin:0;max-width:66ch}
+.note{margin:.9rem 0 0;padding:.6rem .85rem;border-radius:0 8px 8px 0;border-left:3px solid var(--warn);background:var(--warn-bg);font-size:.9375rem;max-width:66ch}
+.note strong{font-weight:600;margin-right:.3rem}
+
+/* study mode */
+body.study .preview{display:none}
+body.study .correct-body:not(.shown){filter:blur(7px);user-select:none;cursor:pointer}
+body.study .correct-body:not(.shown) ~ .hint{display:block!important;margin-top:.5rem!important;font-size:.875rem;color:var(--ok);font-weight:500}
+body.study .correct-body{cursor:pointer}
+
+.empty{text-align:center;padding:2.5rem 1rem;color:var(--ink-2)}
+.empty p{margin:0 0 .8rem}
+.empty button{height:2.6rem;padding:0 1.1rem;border-radius:99px;border:1px solid var(--line);background:var(--surface);cursor:pointer}
+
+/* extra sections */
+.extra{margin:1.5rem 0 0;padding-top:1.5rem;border-top:1px solid var(--line)}
+.extra h2{margin:0 0 .5rem;font-size:1.25rem;font-weight:600;line-height:1.4}
+.extra p{margin:0 0 .8rem;color:var(--ink-2);max-width:62ch}
+.fixes{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
+.fixes li{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:.7rem .9rem}
+.fixes .old{color:var(--bad)} .fixes strong{color:var(--ok);font-weight:600}
+.limits{margin:0;padding-left:1.2rem;color:var(--ink-2);max-width:62ch}
+.limits li{margin:.3rem 0}
+footer{padding:1.5rem 0 calc(2.5rem + env(safe-area-inset-bottom));color:var(--ink-2);font-size:.875rem}
+.to-top{display:inline-block;margin-top:.8rem;color:var(--accent)}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{transition:none!important}}
+@media print{
+  .toolbar,.tools,.jump,.to-top{display:none}
+  body{background:#fff;color:#000}
+  .q{break-inside:avoid;box-shadow:none}
+  .preview{display:none}
+}
+</style>
+</head>
+<body>
+<nav class="topnav" aria-label="นำทาง"><div class="wrap"><a href="https://devpb412022.github.io/Module6_HUB/index.html">← Module 6 HUB</a><span class="sep"></span><a href="answers-54.html">ชุด 54 ข้อ</a><span class="here">ชุด 60 ข้อ</span></div></nav>
+<header class="hero">
+<div class="wrap">
+<h1>ตรวจคำตอบ Module 6 (B1) ชุด 60 ข้อ</h1>
+<p class="lead">ตรวจคำตอบในไฟล์ M6_new.docx ทั้ง 60 ข้อเทียบกับหนังสือ <i>Module 6 Materials and Hardware – B1</i> (June 2024, 643 หน้า) พบ <b>4 ข้อที่ผิด</b> และอีก <b>8 ข้อ</b> ที่ถูกแค่บางส่วน ที่เหลือถูกต้อง</p>
+<div class="meter" role="img" aria-label="ผิด 4 ข้อ ไม่ครบ 8 ข้อ ตรวจไม่ได้ 1 ข้อ ถูกต้อง 47 ข้อ"><span class="m-bad" style="flex:4"></span><span class="m-warn" style="flex:8"></span><span class="m-unk" style="flex:1"></span><span class="m-ok" style="flex:47"></span></div>
+<ul class="legend"><li><i class="dot bad"></i>ผิด <b>4</b> ข้อ</li><li><i class="dot warn"></i>ไม่ครบ <b>8</b> ข้อ</li><li><i class="dot unk"></i>ตรวจไม่ได้ <b>1</b> ข้อ</li><li><i class="dot ok"></i>ถูกต้อง <b>47</b> ข้อ</li></ul>
+<div class="fixfirst"><p>ผิด แก้ก่อน:</p><a class="jump" href="#q21">21</a><a class="jump" href="#q28">28</a><a class="jump" href="#q39">39</a><a class="jump" href="#q57">57</a></div>
+<p class="howto">แตะข้อใดก็ได้เพื่อดูคำตอบเดิม คำอธิบาย และเลขหน้า ป้ายหน้าคือเลข “Page N of 643” ในหนังสือ ซึ่งตรงกับหน้า PDF</p>
+</div>
+</header>
+
+<div class="toolbar">
+<div class="wrap">
+<div class="search" id="search">
+<svg class="mag" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+<input id="q" type="search" inputmode="search" autocomplete="off" placeholder="ค้นหา เช่น Brinell, rivet, หน้า 87" aria-label="ค้นหาในคำถามและคำตอบ">
+<button class="clear" id="clear" type="button" aria-label="ล้างคำค้น"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+</div>
+<div class="chips" role="group" aria-label="กรองตามสถานะ">
+<button class="chip" type="button" data-f="all" aria-pressed="true">ทั้งหมด <span class="c">60</span></button>
+<button class="chip" type="button" data-f="bad" aria-pressed="false">ผิด <span class="c">4</span></button>
+<button class="chip" type="button" data-f="warn" aria-pressed="false">ไม่ครบ <span class="c">8</span></button>
+<button class="chip" type="button" data-f="ok" aria-pressed="false">ถูกต้อง <span class="c">47</span></button>
+<button class="chip" type="button" data-f="unk" aria-pressed="false">ตรวจไม่ได้ <span class="c">1</span></button>
+</div>
+</div>
+</div>
+
+<main class="wrap">
+<div class="tools">
+<p class="count" id="count" aria-live="polite">แสดง 60 จาก 60 ข้อ</p>
+<div class="tool-row">
+<label class="switch"><input type="checkbox" id="study"><span class="track"></span>โหมดทบทวน (ซ่อนคำตอบที่ถูก)</label>
+<button class="linkbtn" id="toggleAll" type="button">เปิดทั้งหมด</button>
+</div>
+</div>
+
+<div class="list" id="list">
+<details class="q ok" id="q1" data-status="ok" data-search="ข้อ 1 what is the purpose for the chrome plating of bolts? anti-corrosion. anti-corrosion (ป้องกันการกัดกร่อน) การชุบผิว bolt เช่น cadmium, chrome ใช้ป้องกันผิวเหล็กจากการกัดกร่อนและสึกหรอ หนังสือระบุว่า bolt เหล็กผสมมักชุบ cadmium และใช้ตัวอักษรรหัสบอกการชุบแบบอื่น (หน้า 332) เลขหน้า 322 ยืนยันจากไฟล์เก่า ข้อความเฉพาะประโยคนี้ในหนังสืออ่านจาก pdf ได้ไม่ชัด หน้า 322">
+<summary>
+<span class="num">1</span>
+<span class="main">
+<span class="qtext">What is the purpose for the chrome plating of bolts?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 322</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Anti-corrosion (ป้องกันการกัดกร่อน)</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Anti-corrosion.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>Anti-corrosion</strong> (ป้องกันการกัดกร่อน)</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>การชุบผิว bolt เช่น cadmium, chrome ใช้ป้องกันผิวเหล็กจากการกัดกร่อนและสึกหรอ หนังสือระบุว่า bolt เหล็กผสมมักชุบ cadmium และใช้ตัวอักษรรหัสบอกการชุบแบบอื่น (หน้า 332)</p></section>
+<p class="note ok"><strong>หมายเหตุ</strong> เลขหน้า 322 ยืนยันจากไฟล์เก่า ข้อความเฉพาะประโยคนี้ในหนังสืออ่านจาก PDF ได้ไม่ชัด</p>
+</div>
+</details>
+<details class="q ok" id="q2" data-status="ok" data-search="ข้อ 2 from what does the number of twists of a locking wire depend on? diameter of the wire. เส้นผ่านศูนย์กลางของลวด (wire diameter) จำนวนเกลียวที่บิดต่อความยาวขึ้นอยู่กับขนาดลวดที่ใช้ล็อก ใช้เป็นหลักในการทำ locking wire ให้แน่นและเรียบร้อย เลขหน้า 362 ยืนยันจากไฟล์เก่า ส่วนข้อความในหนังสืออ่านจาก pdf ไม่เจอ แนะนำเปิดดูหน้านี้เอง หน้า 362">
+<summary>
+<span class="num">2</span>
+<span class="main">
+<span class="qtext">From what does the number of twists of a locking wire depend on?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 362</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> เส้นผ่านศูนย์กลางของลวด (wire diameter)</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Diameter of the wire.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>เส้นผ่านศูนย์กลางของลวด</strong> (wire diameter)</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>จำนวนเกลียวที่บิดต่อความยาวขึ้นอยู่กับขนาดลวดที่ใช้ล็อก ใช้เป็นหลักในการทำ locking wire ให้แน่นและเรียบร้อย</p></section>
+<p class="note ok"><strong>หมายเหตุ</strong> เลขหน้า 362 ยืนยันจากไฟล์เก่า ส่วนข้อความในหนังสืออ่านจาก PDF ไม่เจอ แนะนำเปิดดูหน้านี้เอง</p>
+</div>
+</details>
+<details class="q ok" id="q3" data-status="ok" data-search="ข้อ 3 what is the grip length of a metric bolt? the length of the plain shank. ความยาวของ plain shank (ส่วนลำที่ไม่มีเกลียว) grip length คือส่วนของลำ bolt ที่ไม่มีเกลียว ซึ่งเป็นส่วนที่รับ shear และอยู่ในชิ้นงานที่ยึดกัน ส่วน nominal length วัดจากใต้หัวถึงปลายลำ (หน้า 315)  หน้า 332 (315)">
+<summary>
+<span class="num">3</span>
+<span class="main">
+<span class="qtext">What is the grip length of a metric bolt?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 332</span><span class="tag-x">(315)</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> ความยาวของ plain shank (ส่วนลำที่ไม่มีเกลียว)</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>The length of the plain shank.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>ความยาวของ plain shank</strong> (ส่วนลำที่ไม่มีเกลียว)</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>Grip length คือส่วนของลำ bolt ที่ไม่มีเกลียว ซึ่งเป็นส่วนที่รับ shear และอยู่ในชิ้นงานที่ยึดกัน ส่วน nominal length วัดจากใต้หัวถึงปลายลำ (หน้า 315)</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q4" data-status="ok" data-search="ข้อ 4 in which areas must nuts with a plastic insert never be used? areas of extreme temperature. พื้นที่อุณหภูมิสุดโต่ง ทั้งร้อนและเย็น nut แบบมีแผ่นพลาสติก (nyloc) ล็อกด้วยแรงเสียดทานจากพลาสติก พลาสติกจึงเสื่อมหรือใช้ไม่ได้ผลเมื่ออุณหภูมิสูงหรือต่ำเกินไป ในบริเวณนั้นต้องใช้ locking device แบบอื่น  หน้า 335">
+<summary>
+<span class="num">4</span>
+<span class="main">
+<span class="qtext">In which areas must nuts with a plastic insert never be used?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 335</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> พื้นที่อุณหภูมิสุดโต่ง ทั้งร้อนและเย็น</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Areas of extreme temperature.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>พื้นที่อุณหภูมิสุดโต่ง</strong> ทั้งร้อนและเย็น</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>Nut แบบมีแผ่นพลาสติก (nyloc) ล็อกด้วยแรงเสียดทานจากพลาสติก พลาสติกจึงเสื่อมหรือใช้ไม่ได้ผลเมื่ออุณหภูมิสูงหรือต่ำเกินไป ในบริเวณนั้นต้องใช้ locking device แบบอื่น</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q5" data-status="ok" data-search="ข้อ 5 what are studs? metal rod that are threaded at both end. แท่งโลหะที่มีเกลียวทั้งสองปลาย ใช้ในที่ที่ไม่สามารถหรือไม่เหมาะจะใช้ bolt stud มีแบบ stepped stud ที่ให้การยึดแข็งแรงกว่า ใช้เมื่อปลายฝั่งโลหะต้องฝังในโลหะอ่อน โดยเกลียวฝั่งโลหะใหญ่กว่าฝั่ง nut หนึ่งขนาด  หน้า 342">
+<summary>
+<span class="num">5</span>
+<span class="main">
+<span class="qtext">What are studs?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 342</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> แท่งโลหะที่มีเกลียวทั้งสองปลาย ใช้ในที่ที่ไม่สามารถหรือไม่เหมาะจะใช้ bolt</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Metal rod that are threaded at both end.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>แท่งโลหะที่มีเกลียวทั้งสองปลาย</strong> ใช้ในที่ที่ไม่สามารถหรือไม่เหมาะจะใช้ bolt</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>Stud มีแบบ Stepped stud ที่ให้การยึดแข็งแรงกว่า ใช้เมื่อปลายฝั่งโลหะต้องฝังในโลหะอ่อน โดยเกลียวฝั่งโลหะใหญ่กว่าฝั่ง nut หนึ่งขนาด</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q6" data-status="ok" data-search="ข้อ 6 in which increments are the length and diameter given for ms bolts? คำตอบอยู่ในหน้า 324 คือ 1/16 ทั้ง length และ diameter. เส้นผ่านศูนย์กลางและความยาว (grip) เป็นช่วงละ 1/16 in ซีรีส์ ms ทั่วไปใช้ 1/16 in ทั้งสองค่า หน้า 332 ระบุเพิ่มว่าซีรีส์อื่นอาจใช้ช่วง 1/32 หรือ 1/8 in คำตอบถูก แต่หน้าที่ถูกคือ 331 ไม่ใช่ 324 หน้า 331 (332)">
+<summary>
+<span class="num">6</span>
+<span class="main">
+<span class="qtext">In which increments are the length and diameter given for MS bolts?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 331</span><span class="tag-x">(332)</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> เส้นผ่านศูนย์กลางและความยาว (grip) เป็นช่วงละ 1/16 in</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>คำตอบอยู่ในหน้า 324 คือ 1/16 ทั้ง length และ diameter.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">เส้นผ่านศูนย์กลางและความยาว (grip) เป็นช่วงละ <strong>1/16 in</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ซีรีส์ MS ทั่วไปใช้ 1/16 in ทั้งสองค่า หน้า 332 ระบุเพิ่มว่าซีรีส์อื่นอาจใช้ช่วง 1/32 หรือ 1/8 in</p></section>
+<p class="note ok"><strong>หมายเหตุ</strong> คำตอบถูก แต่หน้าที่ถูกคือ 331 ไม่ใช่ 324</p>
+</div>
+</details>
+<details class="q warn" id="q7" data-status="warn" data-search="ข้อ 7 what is chemical corrosion? reaction between metal and gases. โลหะ รวมตัวกับออกซิเจนในอากาศโดยตรง (oxidation) หรือสัมผัสของเหลว/ก๊าซกัดกร่อน เช่น กรดแบตเตอรี่ และคราบ flux ฟิล์มออกไซด์ที่เกิดบนผิวโลหะส่วนใหญ่ช่วยป้องกันการกัดกร่อนต่อ แต่ถ้าฟิล์มแตกหรือหลุด ผิวโลหะจะถูกออกซิไดซ์ต่อ หนังสือยกตัวอย่างสาเหตุ เช่น กรดแบตเตอรี่ที่หก และคราบ flux ที่ล้างไม่สะอาด (ดูดความชื้นได้) &quot;gases&quot; กว้างเกินไป ควรตอบว่าออกซิเจนในอากาศ หน้า 275">
+<summary>
+<span class="num">7</span>
+<span class="main">
+<span class="qtext">What is chemical corrosion?</span>
+<span class="meta"><span class="badge warn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v6.5M12 17.2v.1"/></svg>ไม่ครบ</span><span class="tag"><span class="tag-n">หน้า 275</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> โลหะ รวมตัวกับออกซิเจนในอากาศโดยตรง (oxidation) หรือสัมผัสของเหลว/ก๊าซกัดกร่อน เช่น กรดแบตเตอรี่ และคราบ flux</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig warn"><h3>คำตอบของคุณ</h3><p>Reaction between metal and gases.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">โลหะ <strong>รวมตัวกับออกซิเจนในอากาศโดยตรง</strong> (oxidation) หรือสัมผัสของเหลว/ก๊าซกัดกร่อน เช่น กรดแบตเตอรี่ และคราบ flux</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ฟิล์มออกไซด์ที่เกิดบนผิวโลหะส่วนใหญ่ช่วยป้องกันการกัดกร่อนต่อ แต่ถ้าฟิล์มแตกหรือหลุด ผิวโลหะจะถูกออกซิไดซ์ต่อ หนังสือยกตัวอย่างสาเหตุ เช่น กรดแบตเตอรี่ที่หก และคราบ flux ที่ล้างไม่สะอาด (ดูดความชื้นได้)</p></section>
+<p class="note warn"><strong>หมายเหตุ</strong> &quot;gases&quot; กว้างเกินไป ควรตอบว่าออกซิเจนในอากาศ</p>
+</div>
+</details>
+<details class="q ok" id="q8" data-status="ok" data-search="ข้อ 8 what is exfoliation corrosion also called? layer corrosion. layer corrosion เป็นการกัดกร่อนระหว่างเกรนในอะลูมิเนียมผสมบางชนิด เกิดเป็นชั้นขนานกับผิว ผลิตภัณฑ์การกัดกร่อนมีปริมาตรมากกว่าโลหะเดิมจึงดันผิวให้หลุดลอกเป็นชั้น ๆ  หน้า 291">
+<summary>
+<span class="num">8</span>
+<span class="main">
+<span class="qtext">What is exfoliation corrosion also called?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 291</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Layer corrosion</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Layer corrosion.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>Layer corrosion</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>เป็นการกัดกร่อนระหว่างเกรนในอะลูมิเนียมผสมบางชนิด เกิดเป็นชั้นขนานกับผิว ผลิตภัณฑ์การกัดกร่อนมีปริมาตรมากกว่าโลหะเดิมจึงดันผิวให้หลุดลอกเป็นชั้น ๆ</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q9" data-status="ok" data-search="ข้อ 9 what must be considered when carbon is combined with aluminum? to avoid moisture coming between them. ป้องกันไม่ให้มีความชื้นระหว่างทั้งสอง เพราะจะเกิด galvanic (dissimilar metal) corrosion โลหะบางชนิดกับ carbon fibre ถ้าสัมผัสกันและมีความชื้นอยู่ระหว่างกันจะเกิดการกัดกร่อน โดยอะลูมิเนียมเป็นฝ่ายถูกกัด ดังนั้น fastener ใน carbon/graphite ต้องเป็น titanium หรือเหล็กทนการกัดกร่อน และถ้าใช้ fitting อะลูมิเนียมต้องทาป้องกันการกัดกร่อน (หน้า 199)  หน้า 280 (199, 284)">
+<summary>
+<span class="num">9</span>
+<span class="main">
+<span class="qtext">What must be considered when carbon is combined with aluminum?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 280</span><span class="tag-x">(199, 284)</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> ป้องกันไม่ให้มีความชื้นระหว่างทั้งสอง เพราะจะเกิด galvanic (dissimilar metal) corrosion</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>To avoid moisture coming between them.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>ป้องกันไม่ให้มีความชื้นระหว่างทั้งสอง</strong> เพราะจะเกิด galvanic (dissimilar metal) corrosion</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>โลหะบางชนิดกับ carbon fibre ถ้าสัมผัสกันและมีความชื้นอยู่ระหว่างกันจะเกิดการกัดกร่อน โดยอะลูมิเนียมเป็นฝ่ายถูกกัด ดังนั้น fastener ใน carbon/graphite ต้องเป็น titanium หรือเหล็กทนการกัดกร่อน และถ้าใช้ fitting อะลูมิเนียมต้องทาป้องกันการกัดกร่อน (หน้า 199)</p></section>
+
+</div>
+</details>
+<details class="q warn" id="q10" data-status="warn" data-search="ข้อ 10 which alloys are susceptible to pitting corrosion? aluminum alloy, stainless steel. aluminum และ magnesium alloys, chromium plated และ stainless steels (รวมผิว nitrided) pitting คือการกัดเป็นหลุมเฉพาะจุด โลหะข้างต้นล้วนไวต่อการกัดกร่อนแบบนี้ ขาด magnesium alloys และ chromium plated หน้า 293">
+<summary>
+<span class="num">10</span>
+<span class="main">
+<span class="qtext">Which alloys are susceptible to pitting corrosion?</span>
+<span class="meta"><span class="badge warn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v6.5M12 17.2v.1"/></svg>ไม่ครบ</span><span class="tag"><span class="tag-n">หน้า 293</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Aluminum และ magnesium alloys, chromium plated และ stainless steels (รวมผิว nitrided)</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig warn"><h3>คำตอบของคุณ</h3><p>Aluminum alloy, stainless steel.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>Aluminum และ magnesium alloys, chromium plated และ stainless steels</strong> (รวมผิว nitrided)</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>Pitting คือการกัดเป็นหลุมเฉพาะจุด โลหะข้างต้นล้วนไวต่อการกัดกร่อนแบบนี้</p></section>
+<p class="note warn"><strong>หมายเหตุ</strong> ขาด magnesium alloys และ chromium plated</p>
+</div>
+</details>
+<details class="q ok" id="q11" data-status="ok" data-search="ข้อ 11 if aluminum and magnesium are combined with an electrolyte between them, which will corrode? magnesium. magnesium โลหะที่เป็น anodic มากกว่าจะถูกกัดกร่อน magnesium เป็นโลหะที่ anodic ที่สุดในตาราง galvanic series  หน้า 279">
+<summary>
+<span class="num">11</span>
+<span class="main">
+<span class="qtext">If aluminum and magnesium are combined with an electrolyte between them, which will corrode?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 279</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Magnesium</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Magnesium.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>Magnesium</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>โลหะที่เป็น anodic มากกว่าจะถูกกัดกร่อน Magnesium เป็นโลหะที่ anodic ที่สุดในตาราง galvanic series</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q12" data-status="ok" data-search="ข้อ 12 when does crevice corrosion start? in combination electrolyte, low and high oxygen concentration. เกิดจาก differential aeration: บริเวณที่มีออกซิเจนสูงเป็น cathode ส่วนในซอกที่ออกซิเจนต่ำเป็น anode จึงถูกกัดกร่อน หนังสือระบุว่าซอกที่เก็บฝุ่นและความชื้นจะถูกกัดรุนแรงกว่า เพราะอัตราส่วนพื้นที่ cathode ต่อ anode สูง ในไฟล์เขียนว่า &quot;crecive&quot; ผมตีความเป็น crevice corrosion หน้า 287 (280)">
+<summary>
+<span class="num">12</span>
+<span class="main">
+<span class="qtext">When does crevice corrosion start?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 287</span><span class="tag-x">(280)</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> เกิดจาก differential aeration: บริเวณที่มีออกซิเจนสูงเป็น cathode ส่วนในซอกที่ออกซิเจนต่ำเป็น anode จึงถูกกัดกร่อน</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>In combination electrolyte, low and high oxygen concentration.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">เกิดจาก <strong>differential aeration</strong>: บริเวณที่มีออกซิเจนสูงเป็น cathode ส่วนในซอกที่ออกซิเจนต่ำเป็น anode จึงถูกกัดกร่อน</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>หนังสือระบุว่าซอกที่เก็บฝุ่นและความชื้นจะถูกกัดรุนแรงกว่า เพราะอัตราส่วนพื้นที่ cathode ต่อ anode สูง</p></section>
+<p class="note ok"><strong>หมายเหตุ</strong> ในไฟล์เขียนว่า &quot;crecive&quot; ผมตีความเป็น crevice corrosion</p>
+</div>
+</details>
+<details class="q ok" id="q13" data-status="ok" data-search="ข้อ 13 what is a permanent joint? be disassembled by damage the joint. ข้อต่อที่ ไม่ได้ออกแบบให้ถอดบ่อย (หรือไม่ถอดเลย) เมื่อถอดแล้วตัวยึดหรือชิ้นงานจะเสียหาย ตัวอย่างคือ adhesives, rivets และ welds  หน้า 305">
+<summary>
+<span class="num">13</span>
+<span class="main">
+<span class="qtext">What is a permanent joint?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 305</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> ข้อต่อที่ ไม่ได้ออกแบบให้ถอดบ่อย (หรือไม่ถอดเลย) เมื่อถอดแล้วตัวยึดหรือชิ้นงานจะเสียหาย</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Be disassembled by damage the joint.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">ข้อต่อที่ <strong>ไม่ได้ออกแบบให้ถอดบ่อย (หรือไม่ถอดเลย)</strong> เมื่อถอดแล้วตัวยึดหรือชิ้นงานจะเสียหาย</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ตัวอย่างคือ adhesives, rivets และ welds</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q14" data-status="ok" data-search="ข้อ 14 which joint can be disassembled without damage? temporary joint. temporary joint ตัวอย่างคือ bolts, nuts, circlips และ quick-release fasteners ซึ่งใช้ตัวยึดตัวเดิมประกอบกลับได้  หน้า 305">
+<summary>
+<span class="num">14</span>
+<span class="main">
+<span class="qtext">Which joint can be disassembled without damage?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 305</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Temporary joint</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Temporary joint.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>Temporary joint</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ตัวอย่างคือ bolts, nuts, circlips และ quick-release fasteners ซึ่งใช้ตัวยึดตัวเดิมประกอบกลับได้</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q15" data-status="ok" data-search="ข้อ 15 what is a fine pitch? where there are many threads per inch. เกลียวที่มี จำนวนเกลียวต่อนิ้วมาก ตรงข้ามกับ coarse pitch ซึ่งมีเกลียวต่อนิ้วน้อย ให้เกลียวแข็งแรงแต่ core diameter อ่อนกว่า  หน้า 311">
+<summary>
+<span class="num">15</span>
+<span class="main">
+<span class="qtext">What is a fine pitch?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 311</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> เกลียวที่มี จำนวนเกลียวต่อนิ้วมาก</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Where there are many threads per inch.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">เกลียวที่มี <strong>จำนวนเกลียวต่อนิ้วมาก</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ตรงข้ามกับ coarse pitch ซึ่งมีเกลียวต่อนิ้วน้อย ให้เกลียวแข็งแรงแต่ core diameter อ่อนกว่า</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q16" data-status="ok" data-search="ข้อ 16 which standards are used for bolts in aircraft construction? an, ms, nas. an, ms และ nas หนังสือระบุว่าอุปกรณ์ยึดบางตัวสามารถกำหนดได้ทั้งแบบ an, ms และ nas  หน้า 384 (322)">
+<summary>
+<span class="num">16</span>
+<span class="main">
+<span class="qtext">Which standards are used for bolts in aircraft construction?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 384</span><span class="tag-x">(322)</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> AN, MS และ NAS</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>AN, MS, NAS.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>AN, MS และ NAS</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>หนังสือระบุว่าอุปกรณ์ยึดบางตัวสามารถกำหนดได้ทั้งแบบ AN, MS และ NAS</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q17" data-status="ok" data-search="ข้อ 17 of which parts does a flare end fitting consist? fitting, sleeve, nut. fitting (body), sleeve และ nut ใช้ nut และ sleeve พิเศษดึงปลายท่อที่บานแล้วเข้ากับ cone เพื่อให้ซีลโลหะต่อโลหะ มีสองระบบคือ ags (มุมบาน 32°) กับ an (74°) ซึ่งใช้แทนกันไม่ได้  หน้า 438">
+<summary>
+<span class="num">17</span>
+<span class="main">
+<span class="qtext">Of which parts does a flare end fitting consist?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 438</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Fitting (body), sleeve และ nut</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Fitting, sleeve, nut.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>Fitting (body), sleeve และ nut</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ใช้ nut และ sleeve พิเศษดึงปลายท่อที่บานแล้วเข้ากับ cone เพื่อให้ซีลโลหะต่อโลหะ มีสองระบบคือ AGS (มุมบาน 32°) กับ AN (74°) ซึ่งใช้แทนกันไม่ได้</p></section>
+
+</div>
+</details>
+<details class="q warn" id="q18" data-status="warn" data-search="ข้อ 18 how are ball bearings classified according to their configuration? deep groove, angular contact, thrust type. แบ่งตามรูปแบบ ring ได้เป็น deep groove และ angular contact thrust types หนังสือจัดไว้ในกลุ่ม bearing สำหรับงานพิเศษ ไม่ใช่การแบ่งตาม ring configuration ส่วนอีกการแบ่งหนึ่งคือตามทิศทางโหลด (radial / thrust) thrust type ไม่อยู่ในรายการแบ่งตาม configuration หน้า 485">
+<summary>
+<span class="num">18</span>
+<span class="main">
+<span class="qtext">How are ball bearings classified according to their configuration?</span>
+<span class="meta"><span class="badge warn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v6.5M12 17.2v.1"/></svg>ไม่ครบ</span><span class="tag"><span class="tag-n">หน้า 485</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> แบ่งตามรูปแบบ ring ได้เป็น deep groove และ angular contact</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig warn"><h3>คำตอบของคุณ</h3><p>Deep groove, angular contact, thrust type.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">แบ่งตามรูปแบบ ring ได้เป็น <strong>deep groove</strong> และ <strong>angular contact</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>Thrust types หนังสือจัดไว้ในกลุ่ม bearing สำหรับงานพิเศษ ไม่ใช่การแบ่งตาม ring configuration ส่วนอีกการแบ่งหนึ่งคือตามทิศทางโหลด (radial / thrust)</p></section>
+<p class="note warn"><strong>หมายเหตุ</strong> thrust type ไม่อยู่ในรายการแบ่งตาม configuration</p>
+</div>
+</details>
+<details class="q ok" id="q19" data-status="ok" data-search="ข้อ 19 what is the characteristic of a helical spring? linear. linear spring characteristic helical spring ใช้เป็น tension, compression และ torsion spring ได้  หน้า 458 (457)">
+<summary>
+<span class="num">19</span>
+<span class="main">
+<span class="qtext">What is the characteristic of a helical spring?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 458</span><span class="tag-x">(457)</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Linear spring characteristic</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Linear.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>Linear</strong> spring characteristic</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>Helical spring ใช้เป็น tension, compression และ torsion spring ได้</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q20" data-status="ok" data-search="ข้อ 20 what is the axial load also called? thrust load. thrust load axial load กระทำบนระนาบขนานกับแนวศูนย์กลางเพลา  หน้า 473">
+<summary>
+<span class="num">20</span>
+<span class="main">
+<span class="qtext">What is the axial load also called?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 473</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Thrust load</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Thrust load.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>Thrust load</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>Axial load กระทำบนระนาบขนานกับแนวศูนย์กลางเพลา</p></section>
+
+</div>
+</details>
+<details class="q bad" id="q21" data-status="bad" data-search="ข้อ 21 which load of a bearing acts parallel to the center of the shaft? radial load. axial (thrust) load radial load กระทำบนระนาบ **ตั้งฉาก (90°)** กับเพลา ส่วน axial load ขนานกับแนวศูนย์กลางเพลา และ combination load คือมีทั้งสองอย่าง ข้อนี้สลับกับข้อ 20 ที่ตอบถูก หน้า 473">
+<summary>
+<span class="num">21</span>
+<span class="main">
+<span class="qtext">Which load of a bearing acts parallel to the center of the shaft?</span>
+<span class="meta"><span class="badge bad"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>ผิด</span><span class="tag"><span class="tag-n">หน้า 473</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Axial (thrust) load</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig bad"><h3>คำตอบของคุณ</h3><p>Radial load.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>Axial (thrust) load</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>Radial load กระทำบนระนาบ <strong>ตั้งฉาก (90°)</strong> กับเพลา ส่วน axial load ขนานกับแนวศูนย์กลางเพลา และ combination load คือมีทั้งสองอย่าง</p></section>
+<p class="note bad"><strong>หมายเหตุ</strong> ข้อนี้สลับกับข้อ 20 ที่ตอบถูก</p>
+</div>
+</details>
+<details class="q ok" id="q22" data-status="ok" data-search="ข้อ 22 which characteristic is a physical characteristic? density. density (ยังมี melting point, magnetizability, electrical และ thermal conductivity) หนังสือแยกคุณสมบัติเป็น physical, mechanical และ technological ฝั่ง physical คือ density, melting point (range), magnetizability, electrical และ thermal conductivity  หน้า 10">
+<summary>
+<span class="num">22</span>
+<span class="main">
+<span class="qtext">Which characteristic is a physical characteristic?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 10</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Density (ยังมี melting point, magnetizability, electrical และ thermal conductivity)</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Density.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>Density</strong> (ยังมี melting point, magnetizability, electrical และ thermal conductivity)</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>หนังสือแยกคุณสมบัติเป็น Physical, Mechanical และ Technological ฝั่ง Physical คือ density, melting point (range), magnetizability, electrical และ thermal conductivity</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q23" data-status="ok" data-search="ข้อ 23 which defects can occur in ferrous components? corrosion and overheating. overheating; distortion/dents/scores/chafing; pulled หรือ missing fasteners; cracks หรือ wear; failures of welds; deterioration of protective treatment; corrosion ที่ตอบมา 2 ข้อ (corrosion, overheating) อยู่ในรายการจริง ตอบถูกแต่ไม่ครบ 7 ข้อในหนังสือ หน้า 70">
+<summary>
+<span class="num">23</span>
+<span class="main">
+<span class="qtext">Which defects can occur in ferrous components?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 70</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Overheating; distortion/dents/scores/chafing; pulled หรือ missing fasteners; cracks หรือ wear; failures of welds; deterioration of protective treatment; corrosion</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Corrosion and overheating.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">Overheating; distortion/dents/scores/chafing; pulled หรือ missing fasteners; cracks หรือ wear; failures of welds; deterioration of protective treatment; <strong>corrosion</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ที่ตอบมา 2 ข้อ (corrosion, overheating) อยู่ในรายการจริง</p></section>
+<p class="note ok"><strong>หมายเหตุ</strong> ตอบถูกแต่ไม่ครบ 7 ข้อในหนังสือ</p>
+</div>
+</details>
+<details class="q ok" id="q24" data-status="ok" data-search="ข้อ 24 which indenter is used by the vickers hardness test? diamond pyramid. เพชรทรงปิรามิดฐานสี่เหลี่ยม วัดจากเส้นทแยงมุมของรอยกด ข้อดีคือค่าความแข็งของวัสดุแข็งมากแม่นกว่า brinell  หน้า 56">
+<summary>
+<span class="num">24</span>
+<span class="main">
+<span class="qtext">Which indenter is used by the Vickers hardness test?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 56</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> เพชรทรงปิรามิดฐานสี่เหลี่ยม</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Diamond pyramid.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>เพชรทรงปิรามิดฐานสี่เหลี่ยม</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>วัดจากเส้นทแยงมุมของรอยกด ข้อดีคือค่าความแข็งของวัสดุแข็งมากแม่นกว่า Brinell</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q25" data-status="ok" data-search="ข้อ 25 which indenter is used by the brinell hardness test? steel ball. ลูกเหล็กชุบแข็ง (hardened steel ball) กดด้วยแรงมาตรฐานแล้ววัดเส้นผ่านศูนย์กลางรอยกดด้วยกล้องจุลทรรศน์ที่สอบเทียบแล้ว  หน้า 54">
+<summary>
+<span class="num">25</span>
+<span class="main">
+<span class="qtext">Which indenter is used by the Brinell hardness test?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 54</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> ลูกเหล็กชุบแข็ง (hardened steel ball)</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Steel ball.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>ลูกเหล็กชุบแข็ง</strong> (hardened steel ball)</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>กดด้วยแรงมาตรฐานแล้ววัดเส้นผ่านศูนย์กลางรอยกดด้วยกล้องจุลทรรศน์ที่สอบเทียบแล้ว</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q26" data-status="ok" data-search="ข้อ 26 what is tensile strength? ability to resist tensile force. ความสามารถในการ ต้านแรงดึง เป็นหนึ่งในสี่ประเภทของ strength ที่หนังสือระบุ: tensile, yield, shear, bearing  หน้า 13">
+<summary>
+<span class="num">26</span>
+<span class="main">
+<span class="qtext">What is tensile strength?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 13</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> ความสามารถในการ ต้านแรงดึง</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Ability to resist tensile force.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">ความสามารถในการ <strong>ต้านแรงดึง</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>เป็นหนึ่งในสี่ประเภทของ strength ที่หนังสือระบุ: tensile, yield, shear, bearing</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q27" data-status="ok" data-search="ข้อ 27 which type of stainless steel is always magnetic? ferritic steel. ferritic steels มีคาร์บอนต่ำและโครเมียมสูง ไม่ตอบสนองต่อการอบความร้อนมากนัก  หน้า 21">
+<summary>
+<span class="num">27</span>
+<span class="main">
+<span class="qtext">Which type of stainless steel is always magnetic?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 21</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Ferritic steels</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Ferritic steel.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>Ferritic steels</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>มีคาร์บอนต่ำและโครเมียมสูง ไม่ตอบสนองต่อการอบความร้อนมากนัก</p></section>
+
+</div>
+</details>
+<details class="q bad" id="q28" data-status="bad" data-search="ข้อ 28 which type of pin locates parts in an accurate position? set pin. dowel pin dowel pin ใช้ให้ตำแหน่งและแนวที่แน่นอนกับชิ้นส่วนที่อาจหมุนได้ โดยมักเป็น push fit ในรูที่ reamed ไว้ ตัวอย่างคือเครื่องกำเนิดไฟฟ้า ปั๊มไฮดรอลิก และ brake unit หนังสือไม่มีคำว่า set pin หน้า 350">
+<summary>
+<span class="num">28</span>
+<span class="main">
+<span class="qtext">Which type of pin locates parts in an accurate position?</span>
+<span class="meta"><span class="badge bad"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>ผิด</span><span class="tag"><span class="tag-n">หน้า 350</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Dowel pin</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig bad"><h3>คำตอบของคุณ</h3><p>Set pin.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>Dowel pin</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>Dowel pin ใช้ให้ตำแหน่งและแนวที่แน่นอนกับชิ้นส่วนที่อาจหมุนได้ โดยมักเป็น push fit ในรูที่ reamed ไว้ ตัวอย่างคือเครื่องกำเนิดไฟฟ้า ปั๊มไฮดรอลิก และ brake unit</p></section>
+<p class="note bad"><strong>หมายเหตุ</strong> หนังสือไม่มีคำว่า set pin</p>
+</div>
+</details>
+<details class="q ok" id="q29" data-status="ok" data-search="ข้อ 29 what is a taper lock fastener? the strongest structural fastener. fastener โครงสร้างที่แข็งแรงที่สุด ที่ใช้บนอากาศยาน ติดตั้งในรูเรียวและดึงด้วย washer nut ทำให้เกิด pre-load ในโลหะรอบรู ช่วยเพิ่มความแข็งแรงของข้อต่อ  หน้า 427">
+<summary>
+<span class="num">29</span>
+<span class="main">
+<span class="qtext">What is a taper lock fastener?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 427</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Fastener โครงสร้างที่แข็งแรงที่สุด ที่ใช้บนอากาศยาน</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>The strongest structural fastener.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>Fastener โครงสร้างที่แข็งแรงที่สุด</strong> ที่ใช้บนอากาศยาน</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ติดตั้งในรูเรียวและดึงด้วย washer nut ทำให้เกิด pre-load ในโลหะรอบรู ช่วยเพิ่มความแข็งแรงของข้อต่อ</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q30" data-status="ok" data-search="ข้อ 30 to what temperature must 2024 dd rivets be heated? 490-500c 490–500°c ให้ความร้อนในเตาลมร้อนหรือ salt bath แล้วจุ่มน้ำเย็นทันที เมื่อออกจากเตาจะเริ่ม age harden ต้องตอกให้เสร็จเร็วที่สุด ถ้าไม่ใช้ทันทีต้องเก็บแช่เย็น (หน้า 388)  หน้า 395">
+<summary>
+<span class="num">30</span>
+<span class="main">
+<span class="qtext">To what temperature must 2024 DD rivets be heated?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 395</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> 490–500°C</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>490-500C</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>490–500°C</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ให้ความร้อนในเตาลมร้อนหรือ salt bath แล้วจุ่มน้ำเย็นทันที เมื่อออกจากเตาจะเริ่ม age harden ต้องตอกให้เสร็จเร็วที่สุด ถ้าไม่ใช้ทันทีต้องเก็บแช่เย็น (หน้า 388)</p></section>
+
+</div>
+</details>
+<details class="q warn" id="q31" data-status="warn" data-search="ข้อ 31 where are quick release couplings used? fuel, hydraulic system. ระบบ fuel, oil, hydraulic และ pneumatic ช่วยประหยัดเวลาถอดเปลี่ยนชิ้นส่วน ป้องกันของเหลวรั่ว และป้องกันการปนเปื้อน ขาด oil และ pneumatic หน้า 445">
+<summary>
+<span class="num">31</span>
+<span class="main">
+<span class="qtext">Where are quick release couplings used?</span>
+<span class="meta"><span class="badge warn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v6.5M12 17.2v.1"/></svg>ไม่ครบ</span><span class="tag"><span class="tag-n">หน้า 445</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> ระบบ fuel, oil, hydraulic และ pneumatic</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig warn"><h3>คำตอบของคุณ</h3><p>Fuel, hydraulic system.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">ระบบ <strong>fuel, oil, hydraulic และ pneumatic</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ช่วยประหยัดเวลาถอดเปลี่ยนชิ้นส่วน ป้องกันของเหลวรั่ว และป้องกันการปนเปื้อน</p></section>
+<p class="note warn"><strong>หมายเหตุ</strong> ขาด oil และ pneumatic</p>
+</div>
+</details>
+<details class="q unk" id="q32" data-status="unk" data-search="ข้อ 32 which color code on a color band indicates hydraulic? blue-yellow. ไม่พบรหัสสีในข้อความหนังสือ หนังสือหน้า 435 อธิบายว่าท่อระบุด้วยแถบสี สัญลักษณ์ หรือข้อความ และมีคำ flam กับ phdan แต่ตารางรหัสสีน่าจะเป็นรูปภาพ ผมยืนยันไม่ได้ว่าถูกหรือผิด ให้เปิดดูรูปหน้า 434–436 เอง หน้า 435">
+<summary>
+<span class="num">32</span>
+<span class="main">
+<span class="qtext">Which color code on a color band indicates hydraulic?</span>
+<span class="meta"><span class="badge unk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 9.2a2.5 2.5 0 115 .6c0 1.6-2.5 2-2.5 3.6M12 17.2v.1"/></svg>ตรวจไม่ได้</span><span class="tag"><span class="tag-n">หน้า 435</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> ไม่พบรหัสสีในข้อความหนังสือ</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig unk"><h3>คำตอบของคุณ</h3><p>Blue-yellow.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">ไม่พบรหัสสีในข้อความหนังสือ</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>หนังสือหน้า 435 อธิบายว่าท่อระบุด้วยแถบสี สัญลักษณ์ หรือข้อความ และมีคำ FLAM กับ PHDAN แต่ตารางรหัสสีน่าจะเป็นรูปภาพ</p></section>
+<p class="note unk"><strong>หมายเหตุ</strong> ผมยืนยันไม่ได้ว่าถูกหรือผิด ให้เปิดดูรูปหน้า 434–436 เอง</p>
+</div>
+</details>
+<details class="q ok" id="q33" data-status="ok" data-search="ข้อ 33 what magnification should a magnifying glass have to confirm suspected cracks? 10x 10-power ใช้แว่นขยาย 10 เท่ายืนยันรอยร้าวที่สงสัย  หน้า 72 (100)">
+<summary>
+<span class="num">33</span>
+<span class="main">
+<span class="qtext">What magnification should a magnifying glass have to confirm suspected cracks?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 72</span><span class="tag-x">(100)</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> 10-power</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>10x</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>10-power</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ใช้แว่นขยาย 10 เท่ายืนยันรอยร้าวที่สงสัย</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q34" data-status="ok" data-search="ข้อ 34 what is the meaning of the groove on a turnbuckle? left hand thread. บอกฝั่งที่เป็น เกลียวซ้าย (left-hand thread) turnbuckle บางตัวมีร่องรอบปลายข้างหนึ่งของ barrel หลังปรับ tension แล้วต้องล็อกด้วย locking clip หรือ locking wire  หน้า 579">
+<summary>
+<span class="num">34</span>
+<span class="main">
+<span class="qtext">What is the meaning of the groove on a turnbuckle?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 579</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> บอกฝั่งที่เป็น เกลียวซ้าย (left-hand thread)</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Left hand thread.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">บอกฝั่งที่เป็น <strong>เกลียวซ้าย</strong> (left-hand thread)</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>Turnbuckle บางตัวมีร่องรอบปลายข้างหนึ่งของ barrel หลังปรับ tension แล้วต้องล็อกด้วย locking clip หรือ locking wire</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q35" data-status="ok" data-search="ข้อ 35 what is a flexible cable? 7x7 cable. สายที่ประกอบด้วย 7 strands × 7 wires (49 เส้น) มีขนาด 1/16 และ 3/32 นิ้ว ใช้กับเส้นทางตรงหรือรอกขนาดใหญ่เท่านั้น  หน้า 567">
+<summary>
+<span class="num">35</span>
+<span class="main">
+<span class="qtext">What is a flexible cable?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 567</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> สายที่ประกอบด้วย 7 strands × 7 wires (49 เส้น) มีขนาด 1/16 และ 3/32 นิ้ว</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>7x7 cable.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">สายที่ประกอบด้วย <strong>7 strands × 7 wires (49 เส้น)</strong> มีขนาด 1/16 และ 3/32 นิ้ว</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ใช้กับเส้นทางตรงหรือรอกขนาดใหญ่เท่านั้น</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q36" data-status="ok" data-search="ข้อ 36 what is the construction of an extra flexible cable? 7 strands and 19 wires. 7 strands × 19 wires (133 เส้น) ขนาดตั้งแต่ 1/8 นิ้วขึ้นไป ใช้เมื่อสายต้องเปลี่ยนทิศทางผ่านรอกเส้นผ่านศูนย์กลางเล็ก  หน้า 567">
+<summary>
+<span class="num">36</span>
+<span class="main">
+<span class="qtext">What is the construction of an extra flexible cable?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 567</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> 7 strands × 19 wires (133 เส้น) ขนาดตั้งแต่ 1/8 นิ้วขึ้นไป</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>7 strands and 19 wires.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>7 strands × 19 wires (133 เส้น)</strong> ขนาดตั้งแต่ 1/8 นิ้วขึ้นไป</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ใช้เมื่อสายต้องเปลี่ยนทิศทางผ่านรอกเส้นผ่านศูนย์กลางเล็ก</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q37" data-status="ok" data-search="ข้อ 37 what is the construction of an aircraft control cable? cable, strand, wire. สายเคเบิลประกอบด้วย หลาย strand และแต่ละ strand ประกอบจากเส้นลวด (wire) โครงสร้างคือ wire รวมเป็น strand และ strand รวมเป็น cable  หน้า 567">
+<summary>
+<span class="num">37</span>
+<span class="main">
+<span class="qtext">What is the construction of an aircraft control cable?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 567</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> สายเคเบิลประกอบด้วย หลาย strand และแต่ละ strand ประกอบจากเส้นลวด (wire)</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Cable, strand, wire.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">สายเคเบิลประกอบด้วย <strong>หลาย strand และแต่ละ strand ประกอบจากเส้นลวด (wire)</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>โครงสร้างคือ wire รวมเป็น strand และ strand รวมเป็น cable</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q38" data-status="ok" data-search="ข้อ 38 what is an advantage of titanium? high strength / weight ratio, corrosion resistance. แข็งแรงสูง น้ำหนักเบา ทนอุณหภูมิ และทนการกัดกร่อน ใช้อย่างแพร่หลายในอุตสาหกรรมการบิน  หน้า 84">
+<summary>
+<span class="num">38</span>
+<span class="main">
+<span class="qtext">What is an advantage of titanium?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 84</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> แข็งแรงสูง น้ำหนักเบา ทนอุณหภูมิ และทนการกัดกร่อน</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>High strength / weight ratio, corrosion resistance.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">แข็งแรงสูง น้ำหนักเบา ทนอุณหภูมิ และทนการกัดกร่อน</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ใช้อย่างแพร่หลายในอุตสาหกรรมการบิน</p></section>
+
+</div>
+</details>
+<details class="q bad" id="q39" data-status="bad" data-search="ข้อ 39 what is the alloy 7075 mostly used for? seat track. ชิ้นส่วนโครงสร้างอากาศยานที่ต้องการความแข็งแรงสูงมาก และ structural rivets หนังสือระบุ 7075 เป็น alloy สำหรับโครงสร้างที่ต้องการความแข็งแรงเป็นพิเศษ และ 2117, 2024, 7075 ใช้ทำ structural rivets (rivet 2024 และ 7075 ต้อง heat treat ก่อนใช้) หนังสือไม่มีคำว่า seat track หน้า 75, 80">
+<summary>
+<span class="num">39</span>
+<span class="main">
+<span class="qtext">What is the alloy 7075 mostly used for?</span>
+<span class="meta"><span class="badge bad"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>ผิด</span><span class="tag"><span class="tag-n">หน้า 75</span><span class="tag-x">, 80</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> ชิ้นส่วนโครงสร้างอากาศยานที่ต้องการความแข็งแรงสูงมาก และ structural rivets</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig bad"><h3>คำตอบของคุณ</h3><p>Seat track.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>ชิ้นส่วนโครงสร้างอากาศยานที่ต้องการความแข็งแรงสูงมาก และ structural rivets</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>หนังสือระบุ 7075 เป็น alloy สำหรับโครงสร้างที่ต้องการความแข็งแรงเป็นพิเศษ และ 2117, 2024, 7075 ใช้ทำ structural rivets (rivet 2024 และ 7075 ต้อง heat treat ก่อนใช้)</p></section>
+<p class="note bad"><strong>หมายเหตุ</strong> หนังสือไม่มีคำว่า seat track</p>
+</div>
+</details>
+<details class="q ok" id="q40" data-status="ok" data-search="ข้อ 40 what is measured by a vickers hardness test? diagonal of impression. เส้นทแยงมุมของรอยกด   หน้า 56–57">
+<summary>
+<span class="num">40</span>
+<span class="main">
+<span class="qtext">What is measured by a Vickers hardness test?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 56–57</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> เส้นทแยงมุมของรอยกด</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Diagonal of impression.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>เส้นทแยงมุมของรอยกด</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p></p></section>
+
+</div>
+</details>
+<details class="q ok" id="q41" data-status="ok" data-search="ข้อ 41 what is measured by a rockwell hardness test? depth of impression. ความลึกของการกด (depth of penetration) rockwell ใช้ลูกเหล็ก (วัสดุอ่อน) หรือกรวยเพชร brale (วัสดุแข็ง)  หน้า 60">
+<summary>
+<span class="num">41</span>
+<span class="main">
+<span class="qtext">What is measured by a Rockwell hardness test?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 60</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> ความลึกของการกด (depth of penetration)</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Depth of impression.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>ความลึกของการกด</strong> (depth of penetration)</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>Rockwell ใช้ลูกเหล็ก (วัสดุอ่อน) หรือกรวยเพชร Brale (วัสดุแข็ง)</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q42" data-status="ok" data-search="ข้อ 42 what does fretting fatigue mean? caused by small scale rubbing movement and abrasion of adjacent parts in heavily loaded joint. การเสียดสีเคลื่อนที่เล็กน้อยและการสึกของชิ้นส่วนที่ชิดกันในข้อต่อที่รับโหลดหนัก   หน้า 66">
+<summary>
+<span class="num">42</span>
+<span class="main">
+<span class="qtext">What does fretting fatigue mean?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 66</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> การเสียดสีเคลื่อนที่เล็กน้อยและการสึกของชิ้นส่วนที่ชิดกันในข้อต่อที่รับโหลดหนัก</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Caused by small scale rubbing movement and abrasion of adjacent parts in heavily loaded joint.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">การเสียดสีเคลื่อนที่เล็กน้อยและการสึกของชิ้นส่วนที่ชิดกันในข้อต่อที่รับโหลดหนัก</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p></p></section>
+
+</div>
+</details>
+<details class="q ok" id="q43" data-status="ok" data-search="ข้อ 43 which statement about connector sockets is correct? socket (female) located in plug or receptacle. sockets (female) อยู่ใน plugs หรือ receptacles และวางฝั่งที่มีไฟ (powered side) เพื่อกันไฟดูด pins (male) ติดฝั่งที่ไม่มีไฟ (cold connector)  หน้า 625">
+<summary>
+<span class="num">43</span>
+<span class="main">
+<span class="qtext">Which statement about connector sockets is correct?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 625</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Sockets (female) อยู่ใน plugs หรือ receptacles และวางฝั่งที่มีไฟ (powered side) เพื่อกันไฟดูด</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Socket (Female) located in plug or receptacle.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">Sockets (female) อยู่ใน <strong>plugs หรือ receptacles</strong> และวางฝั่งที่มีไฟ (powered side) เพื่อกันไฟดูด</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>Pins (male) ติดฝั่งที่ไม่มีไฟ (cold connector)</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q44" data-status="ok" data-search="ข้อ 44 what is understood by the definition &quot;cable&quot;? larger stranded conductors or multiple conductors in one outer sheath. stranded conductors ขนาดใหญ่ หรือหลายตัวนำในเปลือกนอกเดียวกัน ส่วน wire หมายถึงเส้นตัวนำเดี่ยวหรือ stranded conductors ขนาดเล็ก  หน้า 607">
+<summary>
+<span class="num">44</span>
+<span class="main">
+<span class="qtext">What is understood by the definition &quot;cable&quot;?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 607</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Stranded conductors ขนาดใหญ่ หรือหลายตัวนำในเปลือกนอกเดียวกัน</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Larger stranded conductors or multiple conductors in one outer sheath.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>Stranded conductors ขนาดใหญ่ หรือหลายตัวนำในเปลือกนอกเดียวกัน</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ส่วน wire หมายถึงเส้นตัวนำเดี่ยวหรือ stranded conductors ขนาดเล็ก</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q45" data-status="ok" data-search="ข้อ 45 what is an alternative if the wire insulation cannot be stamped with the wire identification? a stamped sleeve will be used. ใช้ stamped sleeve รอบสาย ใช้เมื่อฉนวนปั๊มไม่ติดหรือปั๊มแล้วฉนวนเสียหาย  หน้า 616">
+<summary>
+<span class="num">45</span>
+<span class="main">
+<span class="qtext">What is an alternative if the wire insulation cannot be stamped with the wire identification?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 616</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> ใช้ stamped sleeve รอบสาย</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>A stamped sleeve will be used.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">ใช้ <strong>stamped sleeve</strong> รอบสาย</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ใช้เมื่อฉนวนปั๊มไม่ติดหรือปั๊มแล้วฉนวนเสียหาย</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q46" data-status="ok" data-search="ข้อ 46 aircraft wire and cable must have the following properties: resistant to all fluid, highly flexible, highly strengthened, stranded electrical wire, light in weight. ทนของเหลวทุกชนิด ยืดหยุ่นสูง แข็งแรงสูง เป็น stranded wire และน้ำหนักเบา ฉนวนมีค่าแรงดันที่ทนได้ 600 โวลต์  หน้า 607">
+<summary>
+<span class="num">46</span>
+<span class="main">
+<span class="qtext">Aircraft wire and cable must have the following properties:</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 607</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> ทนของเหลวทุกชนิด ยืดหยุ่นสูง แข็งแรงสูง เป็น stranded wire และน้ำหนักเบา</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Resistant to all fluid, highly flexible, highly strengthened, stranded electrical wire, light in weight.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">ทนของเหลวทุกชนิด ยืดหยุ่นสูง แข็งแรงสูง เป็น stranded wire และน้ำหนักเบา</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ฉนวนมีค่าแรงดันที่ทนได้ 600 โวลต์</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q47" data-status="ok" data-search="ข้อ 47 which statement about fire-resistant wires is correct? temp. range is up to 400c and fire-resistant for 5 min against 1100c. outside insulation is normally red or white. ช่วงอุณหภูมิถึง 400°c ทนไฟ 5 นาทีที่ 1100°c ฉนวนนอกสีแดง บางครั้งสีขาว ชนิด high temperature ทนได้ถึง 250°c  หน้า 613">
+<summary>
+<span class="num">47</span>
+<span class="main">
+<span class="qtext">Which statement about fire-resistant wires is correct?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 613</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> ช่วงอุณหภูมิถึง 400°C ทนไฟ 5 นาทีที่ 1100°C ฉนวนนอกสีแดง บางครั้งสีขาว</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Temp. range is up to 400C and fire-resistant for 5 min against 1100C. Outside insulation is normally red or white.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">ช่วงอุณหภูมิถึง <strong>400°C</strong> ทนไฟ <strong>5 นาทีที่ 1100°C</strong> ฉนวนนอกสีแดง บางครั้งสีขาว</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ชนิด high temperature ทนได้ถึง 250°C</p></section>
+
+</div>
+</details>
+<details class="q warn" id="q48" data-status="warn" data-search="ข้อ 48 what falls into the group of colored metals? copper, brass. copper, brass, bronze, copper-aluminum alloys, nickel และ zinc copper (ρ = 8.93 g/cm³) อ่อน เหนียว ทนการกัดกร่อน นำความร้อนและไฟฟ้าดี ใช้ทำท่อและสายไฟ ส่วน brass คือ copper 60–70% ผสม zinc 30–40% ตอบ 2 จากกลุ่มที่ใหญ่กว่านี้ หน้า 87">
+<summary>
+<span class="num">48</span>
+<span class="main">
+<span class="qtext">What falls into the group of colored metals?</span>
+<span class="meta"><span class="badge warn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v6.5M12 17.2v.1"/></svg>ไม่ครบ</span><span class="tag"><span class="tag-n">หน้า 87</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Copper, brass, bronze, copper-aluminum alloys, nickel และ zinc</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig warn"><h3>คำตอบของคุณ</h3><p>Copper, brass.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>Copper, brass, bronze, copper-aluminum alloys, nickel และ zinc</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>Copper (ρ = 8.93 g/cm³) อ่อน เหนียว ทนการกัดกร่อน นำความร้อนและไฟฟ้าดี ใช้ทำท่อและสายไฟ ส่วน brass คือ copper 60–70% ผสม zinc 30–40%</p></section>
+<p class="note warn"><strong>หมายเหตุ</strong> ตอบ 2 จากกลุ่มที่ใหญ่กว่านี้</p>
+</div>
+</details>
+<details class="q ok" id="q49" data-status="ok" data-search="ข้อ 49 why is the number of re-solution treatments of clad sheet limited? because of the copper diffusion. เพราะ copper diffusion การ heat treat และ quench ซ้ำกับ clad sheet ทำให้ทองแดงจากแกนกระจายขึ้นมาชั้น pure aluminum ผิวจึงเสียความต้านการกัดกร่อน จึงจำกัดจำนวนครั้ง  หน้า 95">
+<summary>
+<span class="num">49</span>
+<span class="main">
+<span class="qtext">Why is the number of re-solution treatments of clad sheet limited?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 95</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> เพราะ copper diffusion</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Because of the copper diffusion.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">เพราะ <strong>copper diffusion</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>การ heat treat และ quench ซ้ำกับ clad sheet ทำให้ทองแดงจากแกนกระจายขึ้นมาชั้น pure aluminum ผิวจึงเสียความต้านการกัดกร่อน จึงจำกัดจำนวนครั้ง</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q50" data-status="ok" data-search="ข้อ 50 special care must be applied for connections between aluminum and copper. why? it builds up a voltage element. this results in corrosion. เกิด voltage element ส่งผลให้เกิดการกัดกร่อน ลวดอะลูมิเนียมยังไวต่อการขาดและกัดกร่อนมากกว่าทองแดง จึงมีข้อจำกัด เช่น ห้ามต่อกับอุปกรณ์ที่สั่นรุนแรง หรือจุดที่ต้องถอดต่อบ่อย  หน้า 609">
+<summary>
+<span class="num">50</span>
+<span class="main">
+<span class="qtext">Special care must be applied for connections between aluminum and copper. Why?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 609</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> เกิด voltage element ส่งผลให้เกิดการกัดกร่อน</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>It builds up a voltage element. This results in corrosion.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">เกิด <strong>voltage element</strong> ส่งผลให้เกิดการกัดกร่อน</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ลวดอะลูมิเนียมยังไวต่อการขาดและกัดกร่อนมากกว่าทองแดง จึงมีข้อจำกัด เช่น ห้ามต่อกับอุปกรณ์ที่สั่นรุนแรง หรือจุดที่ต้องถอดต่อบ่อย</p></section>
+
+</div>
+</details>
+<details class="q warn" id="q51" data-status="warn" data-search="ข้อ 51 how is an autoclave system controlled? pressure and temperature. ใช้ vacuum ดูดอากาศออก และ heater ที่ควบคุมได้ เพื่อบ่มเรซิน autoclave เป็นระบบ hot cure ที่ดีกว่าการอบในเตาธรรมดา เพราะช่วยไล่อากาศและผสมเส้นใยกับเรซินให้ดีขึ้น คำตอบใกล้เคียง แต่ไม่ตรงถ้อยคำในหนังสือ หน้า 151">
+<summary>
+<span class="num">51</span>
+<span class="main">
+<span class="qtext">How is an autoclave system controlled?</span>
+<span class="meta"><span class="badge warn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v6.5M12 17.2v.1"/></svg>ไม่ครบ</span><span class="tag"><span class="tag-n">หน้า 151</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> ใช้ vacuum ดูดอากาศออก และ heater ที่ควบคุมได้ เพื่อบ่มเรซิน</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig warn"><h3>คำตอบของคุณ</h3><p>Pressure and temperature.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">ใช้ <strong>vacuum ดูดอากาศออก และ heater ที่ควบคุมได้</strong> เพื่อบ่มเรซิน</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>Autoclave เป็นระบบ hot cure ที่ดีกว่าการอบในเตาธรรมดา เพราะช่วยไล่อากาศและผสมเส้นใยกับเรซินให้ดีขึ้น</p></section>
+<p class="note warn"><strong>หมายเหตุ</strong> คำตอบใกล้เคียง แต่ไม่ตรงถ้อยคำในหนังสือ</p>
+</div>
+</details>
+<details class="q ok" id="q52" data-status="ok" data-search="ข้อ 52 for which type of damage is x-ray used? internal crack. รอยร้าวที่ผิวและ รอยร้าวภายใน ที่มองไม่เห็นด้วยตา ยังตรวจน้ำที่อยู่ในเซลล์ honeycomb core ได้ด้วย  หน้า 169">
+<summary>
+<span class="num">52</span>
+<span class="main">
+<span class="qtext">For which type of damage is X-ray used?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 169</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> รอยร้าวที่ผิวและ รอยร้าวภายใน ที่มองไม่เห็นด้วยตา</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Internal crack.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">รอยร้าวที่ผิวและ <strong>รอยร้าวภายใน</strong> ที่มองไม่เห็นด้วยตา</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ยังตรวจน้ำที่อยู่ในเซลล์ honeycomb core ได้ด้วย</p></section>
+
+</div>
+</details>
+<details class="q warn" id="q53" data-status="warn" data-search="ข้อ 53 in which manual are the testing methods of composite parts described? ndt. manual. ntm (non-destructive testing manual) และ srm วิธีทดสอบอยู่ใน ntm ส่วนขั้นตอนซ่อมอยู่ใน srm ขาด srm หน้า 166">
+<summary>
+<span class="num">53</span>
+<span class="main">
+<span class="qtext">In which manual are the testing methods of composite parts described?</span>
+<span class="meta"><span class="badge warn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v6.5M12 17.2v.1"/></svg>ไม่ครบ</span><span class="tag"><span class="tag-n">หน้า 166</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> NTM (Non-destructive Testing Manual) และ SRM</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig warn"><h3>คำตอบของคุณ</h3><p>NDT. Manual.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>NTM (Non-destructive Testing Manual)</strong> และ <strong>SRM</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>วิธีทดสอบอยู่ใน NTM ส่วนขั้นตอนซ่อมอยู่ใน SRM</p></section>
+<p class="note warn"><strong>หมายเหตุ</strong> ขาด SRM</p>
+</div>
+</details>
+<details class="q ok" id="q54" data-status="ok" data-search="ข้อ 54 which test method is used to detect the strength of the matrix system? barcol test. hardness test เช่น barcol ใช้หลังบ่มแล้วเพื่อดูว่าเรซินแข็งถึงระดับ ผลทดสอบเทียบกับตารางเฉพาะเรซิน และบอกเฉพาะความแข็งแรงของ matrix ไม่ใช่ของ composite ทั้งชิ้น  หน้า 169">
+<summary>
+<span class="num">54</span>
+<span class="main">
+<span class="qtext">Which test method is used to detect the strength of the matrix system?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 169</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Hardness test เช่น Barcol</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Barcol test.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>Hardness test</strong> เช่น Barcol</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ใช้หลังบ่มแล้วเพื่อดูว่าเรซินแข็งถึงระดับ ผลทดสอบเทียบกับตารางเฉพาะเรซิน และบอกเฉพาะความแข็งแรงของ matrix ไม่ใช่ของ composite ทั้งชิ้น</p></section>
+
+</div>
+</details>
+<details class="q ok" id="q55" data-status="ok" data-search="ข้อ 55 which thread in aircraft fabric runs crosswise? weft. weft   หน้า 253">
+<summary>
+<span class="num">55</span>
+<span class="main">
+<span class="qtext">Which thread in aircraft fabric runs crosswise?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 253</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Weft</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Weft.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>Weft</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p></p></section>
+
+</div>
+</details>
+<details class="q ok" id="q56" data-status="ok" data-search="ข้อ 56 why does a metal corrode? it is a natural process of materials trying to return to their normal states. เป็นกระบวนการธรรมชาติที่วัสดุพยายามกลับสู่สภาพปกติ การกัดกร่อนมีหลายประเภท และมักเกิดหลายแบบพร้อมกัน  หน้า 270">
+<summary>
+<span class="num">56</span>
+<span class="main">
+<span class="qtext">Why does a metal corrode?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 270</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> เป็นกระบวนการธรรมชาติที่วัสดุพยายามกลับสู่สภาพปกติ</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>It is a natural process of materials trying to return to their normal states.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body">เป็นกระบวนการธรรมชาติที่วัสดุพยายามกลับสู่สภาพปกติ</div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>การกัดกร่อนมีหลายประเภท และมักเกิดหลายแบบพร้อมกัน</p></section>
+
+</div>
+</details>
+<details class="q bad" id="q57" data-status="bad" data-search="ข้อ 57 which of the materials is most cathodic? chromium. gold ลำดับในตารางไล่ไป lead, tin, copper, stainless steel, silver, nickel, chromium, **gold (most cathodic)** chromium เป็นอันดับรองสุดท้าย ผิดเพราะเลือกตัวรองสุดท้าย หน้า 279">
+<summary>
+<span class="num">57</span>
+<span class="main">
+<span class="qtext">Which of the materials is most cathodic?</span>
+<span class="meta"><span class="badge bad"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>ผิด</span><span class="tag"><span class="tag-n">หน้า 279</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Gold</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig bad"><h3>คำตอบของคุณ</h3><p>Chromium.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>Gold</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ลำดับในตารางไล่ไป Lead, Tin, Copper, Stainless Steel, Silver, Nickel, Chromium, <strong>Gold (most cathodic)</strong> Chromium เป็นอันดับรองสุดท้าย</p></section>
+<p class="note bad"><strong>หมายเหตุ</strong> ผิดเพราะเลือกตัวรองสุดท้าย</p>
+</div>
+</details>
+<details class="q ok" id="q58" data-status="ok" data-search="ข้อ 58 for which fabric is linen thread used for sewing? linen, cotton. ผ้า linen และ cotton ส่วน polyester thread ใช้เย็บด้วยเครื่องและด้วยมือกับผ้า polyester  หน้า 256">
+<summary>
+<span class="num">58</span>
+<span class="main">
+<span class="qtext">For which fabric is linen thread used for sewing?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 256</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> ผ้า linen และ cotton</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Linen, cotton.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>ผ้า linen และ cotton</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ส่วน polyester thread ใช้เย็บด้วยเครื่องและด้วยมือกับผ้า polyester</p></section>
+
+</div>
+</details>
+<details class="q warn" id="q59" data-status="warn" data-search="ข้อ 59 which cord is used for linen and cotton coverings? nylon. flax cord หรือ braided nylon cord  ตอบ nylon ได้แค่หนึ่งในสองชนิด หน้า 256">
+<summary>
+<span class="num">59</span>
+<span class="main">
+<span class="qtext">Which cord is used for linen and cotton coverings?</span>
+<span class="meta"><span class="badge warn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v6.5M12 17.2v.1"/></svg>ไม่ครบ</span><span class="tag"><span class="tag-n">หน้า 256</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Flax cord หรือ braided nylon cord</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig warn"><h3>คำตอบของคุณ</h3><p>Nylon.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>Flax cord หรือ braided nylon cord</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p></p></section>
+<p class="note warn"><strong>หมายเหตุ</strong> ตอบ nylon ได้แค่หนึ่งในสองชนิด</p>
+</div>
+</details>
+<details class="q ok" id="q60" data-status="ok" data-search="ข้อ 60 which thread in aircraft fabric runs lengthwise? warp. warp ด้านที่ไม่ขาดลุ่ย เรียกว่า selvedge  หน้า 253">
+<summary>
+<span class="num">60</span>
+<span class="main">
+<span class="qtext">Which thread in aircraft fabric runs lengthwise?</span>
+<span class="meta"><span class="badge ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ถูกต้อง</span><span class="tag"><span class="tag-n">หน้า 253</span></span></span>
+<span class="preview"><span class="pl">คำตอบที่ถูก</span> Warp</span>
+</span>
+<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+</summary>
+<div class="body">
+<div class="answers">
+<section class="ans orig ok"><h3>คำตอบของคุณ (ตรงกับหนังสือ)</h3><p>Warp.</p></section>
+<section class="ans correct"><h3>คำตอบที่ถูก</h3><div class="correct-body"><strong>Warp</strong></div><p class="hint">แตะเพื่อดูคำตอบ</p></section>
+</div>
+<section class="why"><h3>อธิบาย</h3><p>ด้านที่ไม่ขาดลุ่ย เรียกว่า selvedge</p></section>
+
+</div>
+</details>
+</div>
+<div class="empty" id="empty" hidden>
+<p>ไม่พบข้อที่ตรงกับ “<span id="emptyq"></span>” ลองใช้คำอื่น หรือล้างตัวกรอง</p>
+<button type="button" id="reset">ล้างตัวกรอง</button>
+</div>
+
+<section class="extra" aria-labelledby="lim">
+<h2 id="lim">ข้อจำกัดของการตรวจ</h2>
+<ul class="limits">
+<li>ข้อ 1 และ 2: เลขหน้ายืนยันจากไฟล์เก่า ข้อความในหนังสืออ่านจาก PDF ได้ไม่ชัด</li>
+<li>ข้อ 32: รหัสสีท่อ hydraulic น่าจะเป็นรูปภาพ ตรวจจากข้อความไม่ได้</li>
+<li>เปิดหน้าหนังสือยืนยันอีกครั้งก่อนใช้สอบจริง</li>
+</ul>
+</section>
+</main>
+
+<footer>
+<div class="wrap">ตรวจเทียบกับ Module 6 Materials and Hardware – B1 (Last Revision: June 2024)<br><a class="to-top" href="#top" id="top-link">กลับขึ้นด้านบน</a></div>
+</footer>
+
+<script>
+(function(){
+  var qs=document.getElementById('q'), search=document.getElementById('search');
+  var items=[].slice.call(document.querySelectorAll('details.q'));
+  var chips=[].slice.call(document.querySelectorAll('.chip'));
+  var countEl=document.getElementById('count'), empty=document.getElementById('empty'), emptyq=document.getElementById('emptyq');
+  var toggleAll=document.getElementById('toggleAll'), study=document.getElementById('study');
+  var filter='all', query='';
+  function store(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+  function load(k){try{return localStorage.getItem(k)}catch(e){return null}}
+  function apply(){
+    var shown=0, q=query.trim().toLowerCase();
+    items.forEach(function(it){
+      var ok=(filter==='all'||it.dataset.status===filter)&&(!q||it.dataset.search.indexOf(q)>-1);
+      it.hidden=!ok; if(ok)shown++;
+    });
+    countEl.textContent='แสดง '+shown+' จาก '+items.length+' ข้อ';
+    empty.hidden=shown!==0; emptyq.textContent=query||'ตัวกรองนี้';
+    chips.forEach(function(c){c.setAttribute('aria-pressed',c.dataset.f===filter?'true':'false')});
+    search.classList.toggle('has-text',!!query);
+    syncToggle();
+  }
+  function visible(){return items.filter(function(i){return !i.hidden})}
+  function syncToggle(){
+    var v=visible(); var allOpen=v.length>0&&v.every(function(i){return i.open});
+    toggleAll.textContent=allOpen?'ปิดทั้งหมด':'เปิดทั้งหมด';
+  }
+  chips.forEach(function(c){c.addEventListener('click',function(){filter=c.dataset.f;apply()})});
+  qs.addEventListener('input',function(){query=qs.value;apply()});
+  document.getElementById('clear').addEventListener('click',function(){qs.value='';query='';apply();qs.focus()});
+  document.getElementById('reset').addEventListener('click',function(){qs.value='';query='';filter='all';apply()});
+  toggleAll.addEventListener('click',function(){
+    var v=visible(); var allOpen=v.length>0&&v.every(function(i){return i.open});
+    v.forEach(function(i){i.open=!allOpen}); syncToggle();
+  });
+  items.forEach(function(i){i.addEventListener('toggle',syncToggle)});
+
+  function setStudy(on){
+    document.body.classList.toggle('study',on); study.checked=on; store('m6study',on?'1':'0');
+    [].forEach.call(document.querySelectorAll('.correct-body'),function(b){
+      b.classList.remove('shown');
+      if(on){b.setAttribute('tabindex','0');b.setAttribute('role','button');b.setAttribute('aria-label','แตะเพื่อดูคำตอบที่ถูก')}
+      else{b.removeAttribute('tabindex');b.removeAttribute('role');b.removeAttribute('aria-label')}
+    });
+  }
+  study.addEventListener('change',function(){setStudy(study.checked)});
+  document.getElementById('list').addEventListener('click',function(e){
+    var b=e.target.closest('.correct-body'); if(b&&document.body.classList.contains('study'))b.classList.add('shown');
+  });
+  document.getElementById('list').addEventListener('keydown',function(e){
+    if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('correct-body')&&document.body.classList.contains('study')){e.preventDefault();e.target.classList.add('shown')}
+  });
+
+  function openHash(){
+    var id=location.hash.slice(1); if(!/^q\d+$/.test(id))return;
+    var el=document.getElementById(id); if(!el)return;
+    if(el.hidden){filter='all';query='';qs.value='';apply()}
+    el.open=true; el.scrollIntoView({block:'start'});
+  }
+  window.addEventListener('hashchange',openHash);
+  window.addEventListener('beforeprint',function(){items.forEach(function(i){i.open=true})});
+  document.getElementById('top-link').addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0})});
+
+  if(load('m6study')==='1')setStudy(true);
+  apply(); openHash();
+})();
+</script>
+</body>
+</html>

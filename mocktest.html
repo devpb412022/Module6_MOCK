@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mock Test · EASA Module 6 (B1)</title>
+<meta name="description" content="ข้อสอบจำลอง EASA Part-66 CAT B1 Module 6 จากภาพข้อสอบจริง 63 ข้อ พร้อมเฉลยและเลขหน้าในหนังสือ">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%88%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light dark;--paper:#F3F6FA;--surface:#fff;--ink:#14233A;--ink-2:#4A5A72;--line:#D9E0EA;--accent:#245FA8;--on-accent:#fff;--ok:#17734A;--ok-bg:#E5F5EC;--ok-line:#BFE3CE;--bad:#B42318;--bad-bg:#FDE9E7;--bad-line:#F4C3BE;--warn:#8A5A00;--warn-bg:#FFF2D4;--tag-bg:#E6EEF9;--tag-ink:#1B4F94}
+@media (prefers-color-scheme:dark){:root{--paper:#0D1625;--surface:#152237;--ink:#E8EEF7;--ink-2:#A8B6CB;--line:#2A3B56;--accent:#7DB0F5;--on-accent:#0D1625;--ok:#76DBA6;--ok-bg:#12352A;--ok-line:#21553F;--bad:#FF9E94;--bad-bg:#43201F;--bad-line:#6E3330;--warn:#F3C96F;--warn-bg:#3A2E11;--tag-bg:#1E3556;--tag-ink:#A9CBFA}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1rem/1.7 "IBM Plex Sans Thai","Noto Sans Thai",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:8px}
+.wrap{max-width:720px;margin:0 auto;padding:0 1rem;padding-left:max(1rem,env(safe-area-inset-left));padding-right:max(1rem,env(safe-area-inset-right))}
+.topnav{background:var(--surface);border-bottom:1px solid var(--line);padding:.5rem 0;padding-top:calc(.5rem + env(safe-area-inset-top))}
+.topnav .wrap{display:flex;flex-wrap:wrap;gap:.3rem 1rem;align-items:center;font-size:.9375rem}
+.topnav a{color:var(--accent);text-decoration:none;min-height:2.4rem;display:inline-flex;align-items:center;font-weight:500}
+.topnav a:hover{text-decoration:underline}
+.topnav .sep{flex:1}
+h1{margin:1.8rem 0 .5rem;font-size:clamp(1.65rem,5.4vw,2.2rem);line-height:1.25;font-weight:600;letter-spacing:-.01em}
+h2{margin:0 0 .6rem;font-size:1.25rem;line-height:1.4;font-weight:600}
+.lead{margin:0 0 1.2rem;color:var(--ink-2);max-width:56ch}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.15rem;margin:0 0 .9rem}
+.field{margin:0 0 1.1rem}
+.field>label,.field>.lab{display:block;font-weight:500;margin-bottom:.4rem}
+.seg{display:flex;gap:.4rem;flex-wrap:wrap}
+.seg label{flex:1 1 0;min-width:5rem}
+.seg input{position:absolute;opacity:0;width:1px;height:1px}
+.seg span{display:flex;align-items:center;justify-content:center;min-height:2.8rem;border:1px solid var(--line);border-radius:10px;background:var(--surface);text-align:center;padding:0 .5rem}
+.seg input:checked+span{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:500}
+.seg input:focus-visible+span{outline:3px solid var(--accent);outline-offset:2px}
+select{width:100%;min-height:2.8rem;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font:inherit;padding:0 .7rem}
+.sw{display:flex;align-items:flex-start;gap:.7rem;min-height:2.8rem;padding:.35rem 0;cursor:pointer}
+.sw input{width:1.3rem;height:1.3rem;margin-top:.3rem;accent-color:var(--accent)}
+.sw small{display:block;color:var(--ink-2);font-size:.875rem;line-height:1.5}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;min-height:3rem;padding:0 1.2rem;border-radius:12px;border:1px solid var(--line);background:var(--surface);font-weight:500}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent);font-weight:600}
+.btn.block{width:100%}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.hist{margin:0;padding:0;list-style:none;color:var(--ink-2);font-size:.9375rem}
+.hist li{display:flex;justify-content:space-between;padding:.25rem 0;border-bottom:1px solid var(--line)}
+.hist li:last-child{border:0}
+.note{margin:.8rem 0 0;color:var(--ink-2);font-size:.875rem}
+
+/* quiz */
+.qtop{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);padding:.55rem 0 .4rem;padding-top:calc(.55rem + env(safe-area-inset-top))}
+.qtop .row{display:flex;align-items:center;justify-content:space-between;gap:.6rem}
+.qtop .pos{font-weight:600;font-variant-numeric:tabular-nums}
+.timer{font-variant-numeric:tabular-nums;font-weight:500;padding:.1rem .6rem;border-radius:99px;background:var(--tag-bg);color:var(--tag-ink)}
+.timer.low{background:var(--bad-bg);color:var(--bad)}
+.exit{border:0;background:none;color:var(--accent);font-weight:500;min-height:2.4rem;padding:0 .3rem}
+.bar{height:6px;border-radius:99px;background:var(--line);margin-top:.4rem;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .2s}
+.qbody{padding:1.1rem 0 8rem}
+.chip{display:inline-block;font-size:.875rem;padding:.05rem .65rem;border-radius:99px;background:var(--tag-bg);color:var(--tag-ink);margin-bottom:.7rem}
+.qtext{font-size:1.1875rem;line-height:1.55;font-weight:500;margin:0 0 1.1rem}
+.opts{display:grid;gap:.6rem}
+.opt{display:flex;gap:.8rem;align-items:flex-start;text-align:left;width:100%;padding:.85rem .9rem;border:1.5px solid var(--line);border-radius:12px;background:var(--surface);line-height:1.5}
+.opt .l{flex:0 0 1.9rem;height:1.9rem;border-radius:50%;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:.9375rem;text-transform:lowercase}
+.opt:hover{border-color:var(--accent)}
+.opt.sel{border-color:var(--accent);background:var(--tag-bg)}
+.opt.sel .l{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.opt.right{border-color:var(--ok);background:var(--ok-bg)}
+.opt.right .l{background:var(--ok);border-color:var(--ok);color:var(--paper)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.opt.wrong .l{background:var(--bad);border-color:var(--bad);color:var(--paper)}
+.opt .tx{flex:1;padding-top:.2rem}
+.opt .st{font-size:.875rem;font-weight:600;white-space:nowrap;padding-top:.25rem}
+.opt.right .st{color:var(--ok)} .opt.wrong .st{color:var(--bad)}
+.fb{margin-top:1rem;border-radius:12px;padding:.9rem 1rem;border:1px solid var(--line);background:var(--surface)}
+.fb h3{margin:0 0 .3rem;font-size:1rem}
+.fb.ok{background:var(--ok-bg);border-color:var(--ok-line)} .fb.bad{background:var(--bad-bg);border-color:var(--bad-line)}
+.fb p{margin:0 0 .5rem}
+.trick{margin:.6rem 0 .6rem;padding:.6rem .8rem;border-radius:10px;background:var(--warn-bg);color:var(--ink);font-size:.9375rem;line-height:1.6}
+.trick b{font-weight:600}
+.trick .tl{font-weight:600;color:var(--warn);margin-right:.35rem}
+.tag{display:inline-flex;align-items:center;height:1.65rem;padding:0 .7rem 0 1.15rem;background:var(--tag-bg);color:var(--tag-ink);font-size:.875rem;font-weight:500;position:relative;clip-path:polygon(.55rem 0,100% 0,100% 100%,.55rem 100%,0 50%)}
+.tag::before{content:"";position:absolute;left:.5rem;top:50%;width:.3rem;height:.3rem;margin-top:-.15rem;border-radius:50%;background:var(--paper)}
+.selfrow{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:.8rem}
+.selfrow .btn.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.actions{position:fixed;left:0;right:0;bottom:0;z-index:6;background:var(--surface);border-top:1px solid var(--line);padding:.6rem 0;padding-bottom:calc(.6rem + env(safe-area-inset-bottom))}
+.actions .wrap{display:grid;grid-template-columns:1fr auto auto auto;gap:.5rem}
+.actions .btn{min-height:3rem;padding:0 .9rem}
+.flag.on{background:var(--warn-bg);border-color:var(--warn);color:var(--warn)}
+dialog{border:1px solid var(--line);border-radius:16px;background:var(--surface);color:var(--ink);padding:1.1rem;max-width:min(92vw,520px);width:100%}
+dialog::backdrop{background:rgba(10,20,35,.55)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(3rem,1fr));gap:.45rem;margin:.6rem 0 1rem}
+.gn{position:relative;min-height:2.9rem;border-radius:10px;border:1px solid var(--line);background:var(--surface);font-weight:500;font-variant-numeric:tabular-nums}
+.gn.done{background:var(--tag-bg);border-color:var(--accent)}
+.gn.cur{outline:3px solid var(--accent);outline-offset:1px}
+.gn.fl::after{content:"";position:absolute;top:4px;right:4px;width:.55rem;height:.55rem;border-radius:50%;background:#D99A1E}
+.legend{display:flex;flex-wrap:wrap;gap:.3rem 1rem;font-size:.875rem;color:var(--ink-2);margin:0 0 .8rem}
+.dlgbtns{display:flex;gap:.6rem;justify-content:flex-end;flex-wrap:wrap}
+
+/* result */
+.score{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap;margin:0 0 .3rem}
+.score b{font-size:2.6rem;line-height:1.1;font-weight:600;font-variant-numeric:tabular-nums}
+.verdict{display:inline-flex;align-items:center;gap:.4rem;padding:.15rem .8rem;border-radius:99px;font-weight:600}
+.verdict.pass{background:var(--ok-bg);color:var(--ok)} .verdict.fail{background:var(--bad-bg);color:var(--bad)}
+.cat{display:grid;grid-template-columns:1fr auto;gap:.15rem .8rem;margin:0 0 .8rem}
+.cat .meter{grid-column:1/-1;height:8px;border-radius:99px;background:var(--line);overflow:hidden}
+.cat .meter i{display:block;height:100%;background:var(--ok)}
+.cat .meter i.low{background:var(--bad)}
+.tabs{display:flex;gap:.4rem;margin:1.2rem 0 .8rem}
+.tabs button{flex:1;min-height:2.8rem;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.tabs button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:500}
+.rv{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:.9rem 1rem;margin:0 0 .7rem;border-left-width:5px}
+.rv.ok{border-left-color:var(--ok)} .rv.bad{border-left-color:var(--bad)} .rv.na{border-left-color:#8A94A6}
+.rv .q{font-weight:500;margin:0 0 .5rem}
+.rv .ln{margin:.2rem 0;font-size:.9375rem}
+.rv .ln b{font-weight:600}
+.rv .you.bad b{color:var(--bad)} .rv .corr b{color:var(--ok)}
+.rv .ex{margin:.5rem 0 .5rem;color:var(--ink-2);font-size:.9375rem}
+.badge{display:inline-block;font-size:.8125rem;font-weight:600;padding:0 .55rem;border-radius:99px;margin-right:.4rem}
+.badge.ok{background:var(--ok-bg);color:var(--ok)} .badge.bad{background:var(--bad-bg);color:var(--bad)} .badge.na{background:var(--tag-bg);color:var(--tag-ink)}
+.resbtns{display:grid;gap:.6rem;margin:1rem 0 2rem}
+footer{padding:1rem 0 calc(2rem + env(safe-area-inset-bottom));color:var(--ink-2);font-size:.875rem}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:420px){.actions .btn{padding:0 .6rem;font-size:.9375rem}}
+</style>
+</head>
+<body>
+<nav class="topnav"><div class="wrap"><a href="https://devpb412022.github.io/Module6_HUB/index.html">← Module 6 HUB</a><span class="sep"></span><a href="index.html">ตรวจคำตอบ</a><a href="exam-key.html">เฉลย</a></div></nav>
+<main class="wrap" id="app" aria-live="polite"></main>
+<div class="actions" id="actions" hidden></div>
+<dialog id="dlg"></dialog>
+<script>
+const CATS={"comp": "Composite และวัสดุไม่ใช่โลหะ", "corr": "Corrosion", "metal": "โลหะและการทดสอบ", "elec": "สายไฟและ Connector", "fast": "Fasteners และเกลียว", "mech": "Bearing และเฟือง"};
+const BANK=[{"id": 1, "type": "mc", "cat": "comp", "q": "Which fibre have the highest tensile strength?", "opts": ["Carbon Fibre", "Glass Fibre", "Aramid Fibre"], "ans": 2, "exp": "Kevlar 49 (aramid) มี tensile strength และความต้านแรงกระแทกสูงสุดในบรรดาเส้นใยเสริมแรง แข็งกว่า glass แต่ stiffness ประมาณครึ่งหนึ่งของ carbon และเบากว่า glass ประมาณ 40%", "page": "117", "trick": "Kevlar = เสื้อกันกระสุน ทนทั้งแรงดึงและแรงกระแทกที่สุด จำ 'Aramid = เกราะ'"}, {"id": 2, "type": "mc", "cat": "comp", "q": "For which fibre can we use polyester resin?", "opts": ["carbon fibre", "glass fibre", "aramide fibre"], "ans": 1, "exp": "Polyester resin ใช้คู่กับ glass fibre (GRP) หนังสือหน้า 106 กล่าวถึงผ้าที่ชุบ polyester resin แล้วขึ้นรูป", "page": "106", "trick": "จับคู่ <b>P–G</b>: Polyester กับ Glass (GRP = Glass Reinforced Plastic) ส่วน carbon และ aramid ไม่ใช่คู่ของ polyester ในข้อสอบ"}, {"id": 3, "type": "mc", "cat": "comp", "q": "For what are transparent thermoplastic used on aircrafts?", "opts": ["pipes", "radome", "windshields"], "ans": 2, "exp": "ใช้ทำ windshield และ side window ชนิดที่ใช้คือ cellulose acetate และ acrylic", "page": "103", "trick": "Transparent = โปร่งใส = มองทะลุ = <b>windshield</b> (ท่อ pipes ไม่ต้องใส)"}, {"id": 4, "type": "mc", "cat": "comp", "q": "What are in the group thermosetting materials?", "opts": ["polyesters, acrylics", "epoxies, phenolics", "epoxies, acrylics"], "ans": 1, "exp": "Thermosets ได้แก่ phenolics, epoxies, polyurethanes, polyesters, silicones ส่วน acrylic เป็น thermoplastic", "page": "105", "trick": "จำสูตร <b>PEPPS</b>: Phenolics, Epoxies, Polyurethanes, Polyesters, Silicones และ acrylic เป็น thermoplastic เสมอ (Thermo<b>SET</b> = เซ็ตแล้วเซ็ตเลย เหมือนไข่ต้ม)"}, {"id": 5, "type": "mc", "cat": "comp", "q": "What is the purpose of vacuum bagging?", "opts": ["The fibre to resin ratio is controlled by removing excess resin.", "The vacuum bagging controls the ventilation of the composite part.", "Under the high pressure is the cure process controlled."], "ans": 0, "exp": "ดูดอากาศและเรซินส่วนเกินออก ได้ fibre/resin ratio ที่ดีโดยไม่มีฟองอากาศ ช่วยให้คุมอุณหภูมิและเวลา cure ได้ และได้ผิวงานที่ดี", "page": "187", "trick": "Vacuum = <b>ดูดออก</b> ไม่ใช่อัดเข้า ดูดเรซินส่วนเกินและฟองอากาศ ได้ fibre:resin ที่พอดี"}, {"id": 6, "type": "mc", "cat": "comp", "q": "Which type of inspection method is used for internal damages on composites?", "opts": ["Coin Tap Test", "Ultrasonic Inspection", "Barcol Test"], "ans": 1, "exp": "หนังสือหน้า 169 ระบุว่า internal damage ใช้ ultrasonic tester (ส่งคลื่นความถี่สูงผ่านชิ้นงานแล้วดู echo บน oscilloscope) ส่วน coin tap (หน้า 168) ใช้หา delamination และ Barcol เป็นการทดสอบความแข็งของ matrix", "page": "169", "trick": "<b>U</b>ltrasonic = เสียงทะลุเข้า<b>ข้างใน</b> ส่วน coin tap = เคาะที่ผิว และ Barcol = วัดความแข็ง"}, {"id": 7, "type": "mc", "cat": "comp", "q": "For which type of damage is x-ray used?", "opts": ["internal cracks", "delamination", "debonding"], "ans": 0, "exp": "X-ray ตรวจรอยร้าวที่ผิวและรอยร้าวภายในที่มองไม่เห็นด้วยตา", "page": "169", "trick": "X-ray = เห็นทะลุ จึงเห็น <b>รอยร้าวภายใน</b>"}, {"id": 8, "type": "mc", "cat": "comp", "q": "What can happen if we use aluminum fastener for carbon parts?", "opts": ["The aluminum part have the tendency to corrode.", "The carbon part have the tendency to delamination.", "The carbon part have the tendency to corrode."], "ans": 0, "exp": "carbon/graphite ทำให้อะลูมิเนียมกัดกร่อน (galvanic) fastener จึงต้องเป็น titanium หรือเหล็กทนการกัดกร่อน", "page": "199", "trick": "<b>Carbon กินอลู</b> ตัวที่พังคืออะลูมิเนียม จึงต้องใช้ fastener Ti หรือ CRS"}, {"id": 9, "type": "mc", "cat": "comp", "q": "In which ATA chapter are the repair procedure of propellers out of composite described?", "opts": ["chapter 60 - 61", "chapter 51 - 57", "chapter 70 - 83"], "ans": 0, "exp": "หนังสือหน้า 166 ระบุ 51-57 สำหรับ Airframe และ 61 สำหรับ Propellers (พิมพ์เป็น 61-61) จึงเลือก 60-61 ที่ใกล้ที่สุด", "page": "166", "trick": "ใบพัดคือเลข <b>6</b> สองตัว: 60-61 ส่วน Airframe คือ 51-57"}, {"id": 10, "type": "mc", "cat": "comp", "q": "How can you repair small damages like blisters and delamination?", "opts": ["By injecting mixed resin with a syringe.", "By replacement the damaged components.", "Cut out the damage areas and repair."], "ans": 0, "exp": "Blister เล็กและ delamination: เจาะรูแล้วฉีด mixed resin ด้วย syringe กดให้เรซินส่วนเกินออก รอให้แข็ง แล้วขัดและทาสีใหม่", "page": "174", "trick": "<b>เล็ก = ฉีด</b> (syringe) ใหญ่ = ตัดแล้วปะ"}, {"id": 11, "type": "mc", "cat": "comp", "q": "Which repair method is used for plywood?", "opts": ["scarf joint", "by screwing", "spliced joint"], "ans": 0, "exp": "Scarf joint ใช้ต่อและซ่อม plywood โดยปลายต้องลาดเรียว และ feather edge ด้านในต้องแนบสนิท", "page": "239", "trick": "Scarf = ผ้าพันคอ พันเฉียงทับกัน ไม้อัดต่อด้วย <b>รอยลาดเฉียง</b> ไม่ใช่ต่อชนตรง ไม่ใช้สกรู"}, {"id": 12, "type": "mc", "cat": "comp", "q": "What is a type of a softwood?", "opts": ["maple", "acorn", "sitka spruce"], "ans": 2, "exp": "Softwood มาจากต้นไม้ใบเข็ม (conifer) เช่น spruce ส่วน maple เป็น hardwood และ acorn คือผลของต้น oak", "page": "221", "trick": "Softwood = <b>ใบเข็ม มีโคน</b> (conifer) เช่น spruce ส่วน maple ใบกว้าง และ acorn คือผลของ oak (hardwood)"}, {"id": 13, "type": "mc", "cat": "comp", "q": "Out of which part is the skin of the wooden structure?", "opts": ["soft wood", "solid wood", "plywood"], "ans": 2, "exp": "Plywood ใช้ทำ leading-edge skin และ surface panel ของโครงสร้างไม้", "page": "208", "trick": "Skin = ผิวบางเป็นแผ่น = <b>ply</b>wood"}, {"id": 14, "type": "mc", "cat": "comp", "q": "In which direction have wood the highest tensile strength?", "opts": ["in the direction of the rings", "in the radial direction", "in the direction of the grain"], "ans": 2, "exp": "ไม้แข็งแรงที่สุดตามทิศ grain (แนวเส้นใยไม้)", "page": "230", "trick": "เส้นใยไม้เหมือนมัดหลอด ดึงตาม<b>เส้นใย (grain)</b> ทนที่สุด"}, {"id": 15, "type": "mc", "cat": "comp", "q": "Which fabrics are used to cover aircraft?", "opts": ["neopren, linen, polyester, glassfiber", "cotton, neopren, linen, polyester", "cotton, linen, polyester, glassfiber"], "ans": 2, "exp": "ผ้าหุ้มอากาศยานทำจากวัสดุธรรมชาติ linen หรือ cotton และผ้า polyester หรือ glass fiber ที่ได้รับอนุมัติ neoprene ไม่ใช่ผ้าหุ้ม", "page": "253", "trick": "จำ <b>C-L-P-G</b>: Cotton, Linen, Polyester, Glass fibre ส่วน neoprene คือยาง ไม่ใช่ผ้า"}, {"id": 16, "type": "mc", "cat": "comp", "q": "Which tester are used to test the strength of the aircraft fabric?", "opts": ["maul tester, barcol tester", "maule tester, seyboth tester", "seyboth tester, barcol tester"], "ans": 1, "exp": "Maule และ Seyboth เป็น portable tester 2 ชนิดสำหรับวัดความแข็งแรงของผ้า ส่วน Barcol ใช้วัดความแข็งของ composite", "page": "256", "trick": "<b>M&S</b> (ร้านเสื้อผ้า): Maule และ Seyboth ส่วน Barcol ไม่เกี่ยวกับผ้า"}, {"id": 17, "type": "mc", "cat": "comp", "q": "For what is an maule tester used?", "opts": ["To check the stability of an fabric.", "To check the moisture of an fabric.", "To check the strength of an fabric."], "ans": 2, "exp": "Maule tester ใช้วัดความแข็งแรง (strength) ของผ้า", "page": "256", "trick": "<b>M</b>aule = <b>M</b>uscle คือวัดกำลัง (strength)"}, {"id": 18, "type": "mc", "cat": "comp", "q": "Which cord is used for linen and cotton coverings?", "opts": ["polyester cord", "nylon cord", "neopren cord"], "ans": 1, "exp": "ผ้า linen และ cotton ใช้ lacing cord แบบ flax cord หรือ braided nylon cord", "page": "256", "trick": "ผ้า linen/cotton ผูกด้วย flax หรือ <b>nylon</b> ไม่ใช่ polyester หรือ neoprene"}, {"id": 19, "type": "mc", "cat": "corr", "q": "What is electrochemical corrosion?", "opts": ["reaction between metal and gases", "reaction between dissimilar gases", "reaction between dissimilar materials"], "ans": 2, "exp": "เกิดจากโลหะต่างชนิด 2 ชนิดอยู่ร่วมกับ electrolyte เกิดเป็นเซลล์ไฟฟ้า โดยโลหะที่เป็น anode (less noble) จะถูกกัดกร่อน", "page": "277", "trick": "Electro = ไฟฟ้า ต้องมี <b>2 ขั้ว</b> = วัสดุ (โลหะ) 2 ชนิดต่างกัน + electrolyte"}, {"id": 20, "type": "mc", "cat": "corr", "q": "Why does a metal corrode?", "opts": ["It is a natural process of materials trying to return to their normal states.", "Each material used on aircraft trying to react with moisture.", "The metal with the positive potential will react with oxygen in all conditions."], "ans": 0, "exp": "การกัดกร่อนเป็นกระบวนการธรรมชาติที่วัสดุพยายามกลับสู่สภาพปกติ", "page": "270", "trick": "สนิม = โลหะอยากกลับไปเป็นแร่เดิม เป็น<b>ธรรมชาติ</b>"}, {"id": 21, "type": "mc", "cat": "corr", "q": "Which information gives the galvanic series?", "opts": ["information about the strength of a material", "the tendency of corrosion of a material", "information about material properties"], "ans": 1, "exp": "Galvanic series เรียงโลหะตามแนวโน้มการกัดกร่อน จาก anodic (magnesium) ไปถึง cathodic (gold)", "page": "279", "trick": "Galvanic series = <b>ตารางจัดอันดับว่าใครถูกกัดก่อน</b> บนสุด Mg (anodic) ล่างสุด Gold (cathodic)"}, {"id": 22, "type": "mc", "cat": "corr", "q": "What must be considered when carbon with aluminum combined?", "opts": ["Nothing. Both materials have the same potential.", "To avoid that comes moisture between them.", "It is important that the carbon part does not corrode."], "ans": 1, "exp": "carbon fibre กับโลหะบางชนิดเมื่อสัมผัสกันและมีความชื้นระหว่างกันจะเกิดการกัดกร่อน โดยอะลูมิเนียมเป็นฝ่ายถูกกัด จึงต้องกันความชื้น", "page": "280", "trick": "คาร์บอน + อะลูมิเนียม + น้ำ = <b>แบตเตอรี่</b> เลยต้องกันความชื้น"}, {"id": 23, "type": "mc", "cat": "corr", "q": "Which material have less resistance to surface corrosion?", "opts": ["stainless steel", "aluminum alloy", "pure aluminum"], "ans": 1, "exp": "Alloy อะลูมิเนียมต้านการกัดกร่อนต่ำกว่า pure aluminum จึงใช้ cladding รีด pure aluminum ติดผิว", "page": "75", "trick": "Alloy แกร่งกว่าแต่ <b>สนิมง่ายกว่า pure</b> จึงต้องห่อด้วย clad (Alclad)"}, {"id": 24, "type": "mc", "cat": "corr", "q": "If you combined aluminum and magnesium with an electrolyte between them, which material will be corrode?", "opts": ["magnesium", "both materials", "aluminum"], "ans": 0, "exp": "Magnesium เป็น anodic มากกว่า จึงถูกกัดกร่อน", "page": "279", "trick": "<b>AN</b>ode = ถูก<b>กิน</b> (ANode = A Nibble) Mg อยู่หัวแถว anodic จึงเป็นฝ่ายผุ"}, {"id": 25, "type": "mc", "cat": "corr", "q": "How you can avoid stress corrosion?", "opts": ["Use only strong materials.", "Use materials with low strength.", "Use the correct torque values."], "ans": 2, "exp": "หนังสือหน้า 285 ว่า stress corrosion ลดได้ด้วย protecting coatings และกำจัดสิ่งกัดกร่อน ซึ่งไม่มีในตัวเลือก ปัญหานี้เกิดจากแรงดึงค้างร่วมกับสภาพแวดล้อม โดยเฉพาะชิ้นส่วนที่ force fit หรือมี stress สูง จึงเลือกข้อที่เกี่ยวกับการควบคุมความเค้นตอนประกอบ (ข้อนี้ตัวเลือกกำกวม)", "page": "285", "trick": "Stress corrosion = <b>แรงเครียด + สภาพแวดล้อม</b> ลดทั้งคู่: เคลือบ, กำจัดตัวกัด และไม่ใส่แรงเกิน (torque)"}, {"id": 26, "type": "mc", "cat": "corr", "q": "What is the filiform corrosion?", "opts": ["Is a result of rubbing movement between two heavily loaded surfaces of which are metallic.", "It is a chemical attack that occurs at the grain boundaries of certain metals.", "This corrosion occurs in clad aluminum alloy and other metal surfaces having an organic coating."], "ans": 2, "exp": "Filiform corrosion เกิดที่ clad aluminum และผิวโลหะที่มี organic coating ลุกลามเป็นเส้นเหมือนใย ข้อ a คือ fretting corrosion และข้อ b คือ intergranular corrosion", "page": "297", "trick": "Filiform = <b>fil</b>ament = เส้นใย ลามเป็นเส้นไหมใต้ <b>สี</b> (organic coating)"}, {"id": 27, "type": "mc", "cat": "metal", "q": "What indicate the first digit of the number for aluminum alloys?", "opts": ["the first modification", "the principal alloy element", "the value of the alloy element"], "ans": 1, "exp": "เลขหลักแรกของเบอร์อะลูมิเนียม alloy บอกธาตุผสมหลัก (principal alloying element)", "page": "78", "trick": "เลขหลักแรกบอก<b>ธาตุผสมหลัก</b> เช่น 2xxx = Cu (2024), 7xxx = Zn (7075)"}, {"id": 28, "type": "mc", "cat": "metal", "q": "What means the temper designation T3?", "opts": ["strain - hardened", "solution heat - treated", "annealed"], "ans": 1, "exp": "T3 คือ solution heat-treated, cold-worked และ naturally aged", "page": "79", "trick": "T3 = <b>3 ขั้น</b>: solution heat-treat, cold work, age เอง (naturally aged)"}, {"id": 29, "type": "mc", "cat": "metal", "q": "In which range is the strength range of titanium similar?", "opts": ["similar to unalloyed steel", "similar to ferrous metals", "similar to stainless steel"], "ans": 2, "exp": "หนังสือหน้า 85 ระบุว่า strength range ของไทเทเนียมใกล้เคียงกับ stainless steel", "page": "85", "trick": "ไทเทเนียม: เบากว่าเหล็กเหลือ ~56% แต่แข็งแรงพอ<b>เหล็ก/stainless</b>"}, {"id": 30, "type": "mc", "cat": "metal", "q": "What are the main alloys for the aircraft structure?", "opts": ["2024, 2017", "2017, 6061", "2024, 7075"], "ans": 2, "exp": "Alloy ที่ใช้มากในโครงสร้างอากาศยานได้แก่ 2024-T3, 6061-T6, 7075-T6 ในตัวเลือก 2024 และ 7075 ตรงที่สุด", "page": "80", "trick": "คู่ดัง <b>2024 + 7075</b> (ผิว = 2024, โครงสร้างหนัก = 7075)"}, {"id": 31, "type": "mc", "cat": "metal", "q": "What is measured by a vickers hardness test?", "opts": ["The diagonal of impression.", "The diameter of impression.", "The depth of impression."], "ans": 0, "exp": "Vickers ใช้เพชรทรงปิรามิดฐานสี่เหลี่ยม วัดเส้นทแยงมุมของรอยกด", "page": "56", "trick": "<b>V</b>ickers = เพชรปิรา<b>V</b>ิด วัด <b>เส้นทแยง</b> (V = diagonal)"}, {"id": 32, "type": "mc", "cat": "metal", "q": "What is measured by a rockwell hardness test?", "opts": ["The depth of impression.", "The diagonal of impression.", "The diameter of impression."], "ans": 0, "exp": "Rockwell วัดความลึกของการกด (depth of penetration) อ่านค่าได้ทันที", "page": "60", "trick": "<b>R</b>ockwell = <b>R</b>eading depth อ่านค่า<b>ความลึก</b> ได้ทันที"}, {"id": 33, "type": "mc", "cat": "metal", "q": "Which indenter are used by rockwell hardness test?", "opts": ["steel ball", "diamond pyramid", "steel ball, cone"], "ans": 2, "exp": "Rockwell ใช้ลูกเหล็ก (วัสดุอ่อน) และกรวยเพชร Brale (วัสดุแข็ง)", "page": "60", "trick": "Rockwell = <b>B</b>all (ลูกเหล็ก) และ <b>B</b>rale cone ส่วน diamond pyramid เป็นของ Vickers"}, {"id": 34, "type": "mc", "cat": "metal", "q": "Which of the test methods is not used for non-ferrous materials?", "opts": ["Eddy Current Inspection", "Magnetic Particle Inspection", "Ultrasonic Inspection"], "ans": 1, "exp": "Magnetic particle ใช้ได้เฉพาะโลหะที่เป็นแม่เหล็ก (ferromagnetic) จึงไม่ใช้กับ non-ferrous ส่วน eddy current และ ultrasonic ใช้ได้ (หนังสือหน้า 73 จัด MPI ไว้ในรายการของโครงสร้างเหล็ก)", "page": "73", "trick": "Magnetic ต้องเป็น<b>แม่เหล็ก</b> อะลูมิเนียม ทองแดง ไทเทเนียมไม่ติดแม่เหล็ก จึงไม่ใช้ MPI"}, {"id": 35, "type": "mc", "cat": "metal", "q": "Which of the common test methods are used for non-ferrous materials?", "opts": ["Magnetic particle inspection, Ultrasonic inspection", "Resonance inspection, Eddy current inspection", "Eddy current inspection, Ultrasonic inspection"], "ans": 2, "exp": "Eddy current และ ultrasonic ใช้ได้กับโลหะ non-ferrous (หนังสือหน้า 72-73 และ 100-101)", "page": "101", "trick": "Non-ferrous = <b>E-U</b>: Eddy current + Ultrasonic"}, {"id": 36, "type": "mc", "cat": "elec", "q": "Which statement about Fire-Resistant Wires is correct?", "opts": ["Their temperature range is up to 400°C and fire resistant for 5 minutes against a temperature of 1100°C. The outside insulation colour is normally red, sometimes also white.", "Their temperature range is up to 400°C and fire resistant for 15 minutes against a temperature of 1200°C. The outside insulation colour is normally green and white.", "Their temperature range is up to 1200°C and fire resistant for 5 minutes against a temperature of 2000°C. The outside insulation colour is normally red, sometimes also white."], "ans": 0, "exp": "สายทนไฟ: ใช้ได้ถึง 400°C ทนไฟ 5 นาทีที่ 1100°C ฉนวนนอกสีแดง บางครั้งสีขาว", "page": "613", "trick": "จำเลข <b>5 – 1100 – 400</b> (ทนไฟ 5 นาที ที่ 1100°C ใช้ได้ถึง 400°C) และฉนวนสี<b>แดง</b>"}, {"id": 37, "type": "mc", "cat": "elec", "q": "Aircraft wires and cables must possess the following property:", "opts": ["Voltage resistant up to 600 volts", "Voltage resistant up to 115 volts", "Voltage resistant up to 200 volts"], "ans": 0, "exp": "สายไฟอากาศยานต้องทนแรงดันได้ถึง 600 โวลต์", "page": "607", "trick": "สายไฟอากาศยาน <b>600 V</b>"}, {"id": 38, "type": "mc", "cat": "elec", "q": "How is the construction of aircraft control cables?", "opts": ["cable, strand, wire", "strand, wire, roving", "strut, roving, wire"], "ans": 0, "exp": "Control cable ประกอบด้วย wire รวมเป็น strand และ strand รวมเป็น cable", "page": "567", "trick": "เรียงใหญ่ไปเล็ก <b>Cable &gt; Strand &gt; Wire</b> (เชือก &gt; เกลียว &gt; เส้นลวด)"}, {"id": 39, "type": "mc", "cat": "elec", "q": "Which statement about connector sockets is correct?", "opts": ["Sockets (female) located only in receptacles.", "Sockets (female) located only in plugs.", "Sockets (female) located in plugs or receptacles."], "ans": 2, "exp": "Sockets (female) อยู่ใน plugs หรือ receptacles และวางฝั่งที่มีไฟเพื่อกันไฟดูด", "page": "625", "trick": "Socket (female) = <b>ซ่อนรู</b> วางฝั่งมีไฟ เพื่อไม่ให้มือโดนขั้วไฟ pin (male) อยู่ฝั่งไม่มีไฟ"}, {"id": 40, "type": "mc", "cat": "elec", "q": "Aircraft wires and cables must have the following properties:", "opts": ["Resistant to light; Highly flexible; Highly strengthened; Stranded aircraft electrical wire; White insulation", "Resistant to all fluids; Highly flexible; Highly strengthened; Stranded aircraft electrical wire; Light in weight", "Resistant to all fluids; Highly flexible; Highly strengthened; Stranded aircraft electrical wire; White insulation"], "ans": 1, "exp": "คุณสมบัติ: ทนของเหลวทุกชนิด ยืดหยุ่นสูง แข็งแรงสูง เป็น stranded wire และน้ำหนักเบา", "page": "607", "trick": "จำ 5 คำ: ทนของเหลว, ยืดหยุ่น, แข็งแรง, stranded, เบา (ไม่มีเรื่อง<b>สีขาว</b> หรือทนแสง)"}, {"id": 41, "type": "mc", "cat": "elec", "q": "Which statement about aluminium wire is correct?", "opts": ["An aluminum wire can be the same wire-gage number than a copper wire to carry the same amount of current.", "An aluminum wire must be about two wire-gage numbers larger than a copper wire for it to carry the same amount of current.", "An aluminum wire must be about two wire-gage numbers smaller than a copper wire for it to carry the same amount of current."], "ans": 1, "exp": "หนังสือหน้า 609 ระบุว่าสายอะลูมิเนียมต้องมี wire-gage number ใหญ่กว่าทองแดงประมาณ 2 เบอร์ จึงจะรับกระแสเท่ากัน", "page": "609", "trick": "Al นำไฟน้อยกว่า Cu จึงต้อง<b>ตัวใหญ่ขึ้น ~2 เบอร์</b> (ยึดตามถ้อยคำหนังสือ)"}, {"id": 42, "type": "mc", "cat": "elec", "q": "Special care and procedures must be applied by connections between aluminium and copper. Why?", "opts": ["Connections between aluminum and copper, builds up a voltage element. This results in corrosion.", "Connections between aluminum and copper, builds up a voltage element. This results high frequency interference.", "Connections between aluminum and copper, builds up a magnetic element. This results electrical interference."], "ans": 0, "exp": "การต่ออะลูมิเนียมกับทองแดงเกิด voltage element ส่งผลให้เกิดการกัดกร่อน", "page": "609", "trick": "Al + Cu = <b>แบตเตอรี่</b> → กัดกร่อน (ไม่ใช่ความถี่สูงหรือแม่เหล็ก)"}, {"id": 43, "type": "mc", "cat": "fast", "q": "How is the thread called where are few threads per inch?", "opts": ["coarse thread", "fine thread", "unified thread"], "ans": 0, "exp": "Coarse thread มีเกลียวต่อนิ้วน้อย ให้เกลียวแข็งแรงแต่ core diameter อ่อนกว่า", "page": "311", "trick": "Coarse = <b>หยาบ = ห่าง = เกลียวน้อยต่อนิ้ว</b>"}, {"id": 44, "type": "mc", "cat": "fast", "q": "What is the primary role of the lead or power screw?", "opts": ["This screws are used to plug inlets and outlets, such as for gearboxes.", "This screws are employed to adjust and arrest devices and instruments.", "The primary role is the conversion of turning motions to linear motions."], "ans": 2, "exp": "Lead/power screw แปลงการหมุนเป็นการเคลื่อนที่เชิงเส้นหรือส่งแรงมาก ใช้กับแคร่เครื่องกลึง แม่แรง vice", "page": "307", "trick": "Lead = <b>นำ</b> (นำแคร่เลื่อน) หมุนแล้วเลื่อนเป็นเส้นตรง"}, {"id": 45, "type": "open", "cat": "fast", "q": "What is a fine pitch by a thread?", "a": "เกลียวที่มี <b>จำนวนเกลียวต่อนิ้วมาก</b> (ตรงข้ามกับ coarse pitch ที่มีเกลียวต่อนิ้วน้อย)", "exp": "เกลียว fine pitch มีจำนวนเกลียวต่อนิ้วมาก ส่วน coarse ให้เกลียวแข็งแรงแต่ core อ่อนกว่า", "page": "311", "trick": "Fine = ละเอียด = <b>ถี่</b> = เกลียวต่อนิ้วมาก"}, {"id": 46, "type": "open", "cat": "fast", "q": "Which thread or flank angle have screws and bolts?", "a": "<b>60°</b> (ISO metric และ unified thread) ส่วน Whitworth เป็น 55°", "exp": "เกลียว metric และ unified เป็น V thread มุม 60° ส่วน Whitworth และ BSF เป็น 55°", "page": "316–317", "trick": "<b>60°</b> = สามเหลี่ยมด้านเท่า (metric/unified) ส่วน Whitworth = 55"}, {"id": 47, "type": "open", "cat": "fast", "q": "What is the difference between the machine screw and bolt?", "a": "เกลียวของ <b>machine screw วิ่งตลอดลำ</b> ส่วน <b>bolt มีส่วนลำที่ไม่มีเกลียว</b> (grip)", "exp": "Machine screw ใช้ยึด fairing, inspection plate และงานโครงสร้างเบา", "page": "339", "trick": "<b>Screw = เกลียวตลอด</b> ส่วน <b>Bolt = มีลำเรียบ</b> ไว้รับ shear"}, {"id": 48, "type": "open", "cat": "fast", "q": "What is the grip length of a metric bolt?", "a": "ความยาวของ <b>plain shank</b> (ส่วนลำที่ไม่มีเกลียว)", "exp": "Grip length คือส่วนของลำที่ไม่มีเกลียวซึ่งอยู่ในชิ้นงานที่ยึดกัน", "page": "332", "trick": "Grip = <b>จับ</b> คือส่วนลำเรียบที่จับชิ้นงานไว้ (plain shank)"}, {"id": 49, "type": "open", "cat": "fast", "q": "Where are thread inserts used?", "a": "ใน <b>threaded attachment holes ของ airframe และ engine components</b> มักใส่ใน light alloy และใช้ซ่อมเกลียวที่เสียหาย", "exp": "ช่วยให้เกลียวแข็งแรงขึ้นและใช้ bolt ขนาดเดิมได้", "page": "347", "trick": "Insert = <b>ซ่อมเกลียว</b> ในโลหะอ่อน (Al/Mg) และเพิ่มความแข็งแรงของรูเกลียว"}, {"id": 50, "type": "open", "cat": "fast", "q": "What indicate the AN number by screws?", "a": "บอก <b>ชนิดของหัว screw (type of head)</b>", "exp": "ตัวอักษรบอกวัสดุ และเลข dash บอกขนาดและความยาว", "page": "341", "trick": "AN-screw = เลขบอก<b>หัว</b>แบบไหน (AN = Army-Navy)"}, {"id": 51, "type": "open", "cat": "fast", "q": "What represents M6 by metric bolts?", "a": "Bolt metric <b>เส้นผ่านศูนย์กลาง 6 mm</b>", "exp": "ตัวอย่าง M6-15 คือเส้นผ่านศูนย์กลาง 6 mm ยาว 15 mm", "page": "328", "trick": "<b>M</b> = <b>M</b>illimetre M6 = 6 mm"}, {"id": 52, "type": "open", "cat": "fast", "q": "What indicates the AN number of standard bolts?", "a": "บอก <b>ชนิดของ bolt และเส้นผ่านศูนย์กลาง</b>", "exp": "เลขท้ายคือเส้นผ่านศูนย์กลางเป็นช่วงละ 1/16 นิ้ว (AN4 = 1/4 นิ้ว) ความยาวเป็น dash number ช่วงละ 1/8 นิ้ว ตัวอักษรหลังเลข AN บอกวัสดุ", "page": "327", "trick": "AN<b>4</b> = 4/16 = ¼ นิ้ว ดังนั้น AN14 = 14/16 = 7/8 นิ้ว (เลขท้าย ÷ 16)"}, {"id": 53, "type": "open", "cat": "fast", "q": "From what is the number of twist of a locking wire depend on?", "a": "ขึ้นกับ <b>เส้นผ่านศูนย์กลางของลวด (wire diameter)</b>", "exp": "เลขหน้ายืนยันจากไฟล์เก่า ข้อความในหนังสืออ่านจาก PDF ได้ไม่ชัด", "page": "362", "trick": "จำเป็นประโยค: \"บิดกี่รอบ <b>ตามขนาดลวด</b>\""}, {"id": 54, "type": "open", "cat": "fast", "q": "Which type of pin locating the parts in accurately position?", "a": "<b>Dowel pin</b>", "exp": "ใช้ให้ตำแหน่งและแนวที่แน่นอน มักเป็น push fit ในรูที่ reamed", "page": "350", "trick": "<b>Dowel</b> = ตรึงตำแหน่งให้ตรงเป๊ะ (push fit ในรู reamed)"}, {"id": 55, "type": "open", "cat": "fast", "q": "What is a Cherry Max rivet?", "a": "Blind rivet แบบ <b>mechanical lock</b> ผลิตโดย Textron Cherry มี locking collar ที่เห็นได้หลังขึ้นรูปแล้วเท่านั้น", "exp": "ต่างจาก Cherry Lock ที่เห็น locking collar ทั้งก่อนและหลังขึ้นรูป", "page": "400, 404", "trick": "Cherry <b>Lock</b> เห็นปลอกล็อกตลอด ส่วน Cherry <b>Max</b> เห็นปลอกล็อก<b>หลังขึ้นรูปเท่านั้น</b> (ทั้งคู่ = mechanical lock)"}, {"id": 56, "type": "open", "cat": "fast", "q": "What is a Taperlok fastener?", "a": "Fastener โครงสร้างที่ <b>แข็งแรงที่สุด</b> ติดตั้งในรูเรียว (tapered hole)", "exp": "ใช้ washer nut ดึงจน pre-load โลหะรอบรู", "page": "427", "trick": "Taper-lok = <b>เรียว + แน่นสุด</b> ตัวยึดโครงสร้างที่แกร่งที่สุด"}, {"id": 57, "type": "open", "cat": "fast", "q": "Which type of blind rivet is a friction lock rivet?", "a": "<b>Tucker Pop, Avdel และ Chobert</b> rivets", "exp": "กลุ่ม mechanical lock คือ Cherry Lock, Cherry Max และ Huck", "page": "397", "trick": "<b>TAC</b> = <b>T</b>ucker Pop, <b>A</b>vdel, <b>C</b>hobert = Friction lock ส่วน Cherry Lock/Max และ Huck = Mechanical lock"}, {"id": 58, "type": "open", "cat": "mech", "q": "What are thrust loads?", "a": "แรงที่กระทำบน bearing ใน <b>ระนาบขนานกับแนวศูนย์กลางเพลา</b> (axial load)", "exp": "Combination load คือมีทั้ง radial และ axial", "page": "473", "trick": "Thrust = <b>ผลักตามแนวเพลา</b> (ขนาน)"}, {"id": 59, "type": "open", "cat": "mech", "q": "What means radial load?", "a": "แรงที่กระทำบน bearing ใน <b>ระนาบตั้งฉาก (90°) กับเพลา</b>", "exp": "ตรงข้ามกับ axial หรือ thrust load", "page": "473", "trick": "Radial = <b>รัศมี</b> = ตั้งฉากกับเพลา (90°)"}, {"id": 60, "type": "open", "cat": "mech", "q": "What is one of the advantages of a chain drive?", "a": "<b>ไม่มีการลื่นไถล</b> (no slippage) ลด/เพิ่มความเร็วได้ถึง 7:1 ใช้กับเพลาที่อยู่ไกลกันได้ อายุยาว และทำงานในสภาพแวดล้อมรุนแรงได้", "exp": "ตอบข้อใดข้อหนึ่งก็ได้", "page": "547", "trick": "Chain = ไม่ลื่น เหมือนโซ่จักรยาน (<b>no slip</b>) และปรับรอบได้ถึง 7:1"}, {"id": 61, "type": "open", "cat": "mech", "q": "Out of which materials are the gears manufactured?", "a": "เหล็ก <b>non-corrosion resistant</b> เพื่อความแข็งแรงและเหนียว แล้ว <b>case-hardened</b>", "exp": "ผิวแข็งทนการสึก ฟันเจียระไนแม่นยำ", "page": "500", "trick": "เฟือง = เหล็กธรรมดา (ไม่ใช่ CRS) + <b>case-hardened</b> = ผิวแข็ง ใน เหนียว"}, {"id": 62, "type": "open", "cat": "mech", "q": "What is a backlash by a gear?", "a": "<b>ระยะหลวม (lash) ระหว่างฟันเฟืองที่ขบกัน</b> คือผลต่างของช่องว่างระหว่างฟันกับความกว้างฟันที่ขบ", "exp": "ปรับได้โดยเปลี่ยนระยะห่างศูนย์กลาง ต้องมี backlash ที่ถูกต้อง", "page": "505", "trick": "Back-lash = ระยะ<b>แกว่งกลับ</b>ระหว่างฟันที่ขบกัน"}, {"id": 63, "type": "open", "cat": "mech", "q": "What is the meaning of the top land of the gear?", "a": "<b>เส้นผ่านศูนย์กลางนอก (outer diameter) ของเฟือง</b>", "exp": "ตรงข้ามกับ bottom land คือ root diameter", "page": "501", "trick": "Top land = <b>หัวฟัน</b> = OD ส่วน Bottom land = root diameter"}];
+const LET=['a','b','c','d'];
+const $=s=>document.querySelector(s);
+const app=$('#app'), actions=$('#actions'), dlg=$('#dlg');
+let S={screen:'start',qs:[],idx:0,ans:{},rev:{},flags:{},cfg:{},end:0,timer:null,results:null};
+const store={get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const fmt=s=>{s=Math.max(0,s);return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')};
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const isCorrect=q=>q.type==='mc'?S.ans[q.id]===q.ans:S.ans[q.id]==='right';
+const answered=q=>S.ans[q.id]!==undefined;
+
+function start(){
+  stopTimer(); S.screen='start'; actions.hidden=true; window.scrollTo(0,0);
+  const cfg=store.get('m6cfg')||{n:'20',cat:'all',timer:false,instant:false,shuffle:true};
+  const hist=store.get('m6hist')||[];
+  const counts=Object.keys(CATS).map(k=>`<option value="${k}" ${cfg.cat===k?'selected':''}>${CATS[k]} (${BANK.filter(q=>q.cat===k).length})</option>`).join('');
+  app.innerHTML=`
+  <h1>Mock Test · Module 6 (B1)</h1>
+  <p class="lead">ข้อสอบจำลองจากภาพข้อสอบจริง ${BANK.length} ข้อ (ปรนัย ${BANK.filter(q=>q.type==='mc').length} ข้อ และตอบเอง ${BANK.filter(q=>q.type==='open').length} ข้อ) เฉลยทุกข้อมีเลขหน้าในหนังสือ</p>
+  <form class="card" id="cfg" onsubmit="return false">
+    <div class="field"><span class="lab" id="nlab">จำนวนข้อ</span>
+      <div class="seg" role="radiogroup" aria-labelledby="nlab">
+        ${['20','40','all'].map(v=>`<label><input type="radio" name="n" value="${v}" ${cfg.n===v?'checked':''}><span>${v==='all'?'ทั้งหมด':v+' ข้อ'}</span></label>`).join('')}
+      </div></div>
+    <div class="field"><label for="cat">หมวด</label>
+      <select id="cat"><option value="all">ทุกหมวด (${BANK.length})</option>${counts}</select></div>
+    <label class="sw"><input type="checkbox" id="timer" ${cfg.timer?'checked':''}><span>จับเวลา<small>ให้ 90 วินาทีต่อข้อ หมดเวลาจะส่งข้อสอบอัตโนมัติ</small></span></label>
+    <label class="sw"><input type="checkbox" id="instant" ${cfg.instant?'checked':''}><span>เฉลยทันทีหลังตอบ<small>เหมาะกับการฝึก ปิดไว้ถ้าอยากจำลองสอบจริง</small></span></label>
+    <label class="sw"><input type="checkbox" id="shuffle" ${cfg.shuffle?'checked':''}><span>สลับลำดับข้อ</span></label>
+    <button class="btn primary block" id="go" type="button" style="margin-top:.8rem">เริ่มทำข้อสอบ</button>
+    <p class="note">ข้อตอบเอง: นึกคำตอบในใจ แตะดูเฉลย แล้วประเมินตัวเองว่าตอบถูกหรือไม่ เกณฑ์ผ่าน EASA คือ 75%</p>
+  </form>
+  ${hist.length?`<div class="card"><h2>ผลล่าสุด</h2><ul class="hist">${hist.slice(0,5).map(h=>`<li><span>${h.d}</span><span>${h.s}/${h.n} (${h.p}%)</span></li>`).join('')}</ul></div>`:''}
+  <footer>เลขหน้า = “Page N of 643” ของหนังสือ Module 6 (June 2024)</footer>`;
+  $('#go').onclick=()=>{
+    const c={n:document.querySelector('input[name=n]:checked').value,cat:$('#cat').value,timer:$('#timer').checked,instant:$('#instant').checked,shuffle:$('#shuffle').checked};
+    store.set('m6cfg',c); begin(c);
+  };
+}
+function begin(c,ids){
+  let pool=BANK.filter(q=>c.cat==='all'||q.cat===c.cat);
+  if(ids)pool=BANK.filter(q=>ids.includes(q.id));
+  if(c.shuffle)pool=shuffle(pool);
+  if(!ids&&c.n!=='all')pool=pool.slice(0,parseInt(c.n,10));
+  S={screen:'quiz',qs:pool,idx:0,ans:{},rev:{},flags:{},cfg:c,end:0,timer:null,results:null};
+  if(c.timer){S.end=Date.now()+pool.length*90000;S.timer=setInterval(tick,1000)}
+  render();
+}
+function tick(){
+  const el=$('#timer'); const left=Math.round((S.end-Date.now())/1000);
+  if(el){el.textContent=fmt(left);el.classList.toggle('low',left<=60)}
+  if(left<=0)finish();
+}
+function stopTimer(){if(S.timer){clearInterval(S.timer);S.timer=null}}
+function render(){
+  const q=S.qs[S.idx], n=S.qs.length, instant=S.cfg.instant;
+  const done=S.qs.filter(answered).length;
+  let body='';
+  if(q.type==='mc'){
+    const locked=instant&&answered(q);
+    body=`<div class="opts" role="radiogroup" aria-label="ตัวเลือก">${q.opts.map((o,i)=>{
+      let cls='opt',st='';
+      if(locked){ if(i===q.ans){cls+=' right';st='<span class="st">ถูก</span>'} else if(S.ans[q.id]===i){cls+=' wrong';st='<span class="st">ที่คุณเลือก</span>'} }
+      else if(S.ans[q.id]===i)cls+=' sel';
+      return `<button class="${cls}" data-i="${i}" role="radio" aria-checked="${S.ans[q.id]===i}" ${locked?'disabled':''}><span class="l">${LET[i]}</span><span class="tx">${o}</span>${st}</button>`}).join('')}</div>`;
+    if(locked)body+=fb(q,S.ans[q.id]===q.ans);
+  }else{
+    const r=S.rev[q.id];
+    body=r?`<div class="fb"><h3>เฉลย</h3><p>${q.a}</p><p style="color:var(--ink-2)">${q.exp}</p>${tr(q)}<span class="tag">หน้า ${q.page}</span></div>
+      <p style="margin:.9rem 0 .2rem;font-weight:500">คุณตอบถูกไหม</p>
+      <div class="selfrow"><button class="btn ${S.ans[q.id]==='right'?'on':''}" data-self="right">ตอบถูก</button><button class="btn ${S.ans[q.id]==='wrong'?'on':''}" data-self="wrong">ตอบไม่ถูก</button></div>`
+      :`<p style="color:var(--ink-2)">นึกคำตอบในใจก่อน แล้วแตะเพื่อดูเฉลย</p><button class="btn primary block" id="reveal">ดูเฉลย</button>`;
+  }
+  app.innerHTML=`
+  <div class="qtop"><div class="row"><button class="exit" id="exit">ออก</button><span class="pos">ข้อ ${S.idx+1} / ${n}</span>${S.cfg.timer?`<span class="timer" id="timer">${fmt(Math.round((S.end-Date.now())/1000))}</span>`:`<span style="color:var(--ink-2);font-size:.9375rem">ตอบแล้ว ${done}</span>`}</div>
+  <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="${n}" aria-valuenow="${done}"><i style="width:${done/n*100}%"></i></div></div>
+  <div class="qbody"><span class="chip">${CATS[q.cat]}</span><p class="qtext">${q.q}</p>${body}</div>`;
+  const last=S.idx===n-1;
+  actions.hidden=false;
+  actions.innerHTML=`<div class="wrap"><button class="btn" id="prev" ${S.idx===0?'disabled':''}>ก่อนหน้า</button><button class="btn flag ${S.flags[q.id]?'on':''}" id="flag" aria-pressed="${!!S.flags[q.id]}" aria-label="ทำเครื่องหมายไว้ทบทวน">${S.flags[q.id]?'ทำเครื่องหมายแล้ว':'ทำเครื่องหมาย'}</button><button class="btn" id="list" aria-label="ดูรายการข้อ">รายการ</button>${last?'<button class="btn primary" id="submit">ส่งข้อสอบ</button>':'<button class="btn primary" id="next">ถัดไป</button>'}</div>`;
+  window.scrollTo(0,0);
+}
+function tr(q){return q.trick?`<p class="trick"><span class="tl">เทคนิคจำ</span>${q.trick}</p>`:''}
+function fb(q,ok){return `<div class="fb ${ok?'ok':'bad'}"><h3>${ok?'ถูกต้อง':'ยังไม่ถูก'}: ข้อ ${LET[q.ans]}</h3><p>${q.exp}</p>${tr(q)}<span class="tag">หน้า ${q.page}</span></div>`}
+function go(i){S.idx=Math.min(Math.max(i,0),S.qs.length-1);render()}
+function openList(){
+  dlg.innerHTML=`<h2>รายการข้อ</h2><div class="legend"><span>ฟ้า = ตอบแล้ว</span><span>จุดส้ม = ทำเครื่องหมาย</span></div>
+  <div class="grid">${S.qs.map((q,i)=>`<button class="gn ${answered(q)?'done':''} ${i===S.idx?'cur':''} ${S.flags[q.id]?'fl':''}" data-g="${i}" aria-label="ข้อ ${i+1}${answered(q)?' ตอบแล้ว':''}${S.flags[q.id]?' ทำเครื่องหมาย':''}">${i+1}</button>`).join('')}</div>
+  <div class="dlgbtns"><button class="btn" data-close>ปิด</button></div>`;
+  dlg.showModal();
+}
+function confirmSubmit(){
+  const un=S.qs.filter(q=>!answered(q)).length, fl=Object.values(S.flags).filter(Boolean).length;
+  dlg.innerHTML=`<h2>ส่งข้อสอบ</h2><p>${un?`ยังไม่ได้ตอบ ${un} ข้อ `:'ตอบครบทุกข้อแล้ว '}${fl?`และมี ${fl} ข้อที่ทำเครื่องหมายไว้`:''}</p><div class="dlgbtns"><button class="btn" data-close>กลับไปทำต่อ</button><button class="btn primary" data-finish>ส่งเลย</button></div>`;
+  dlg.showModal();
+}
+function finish(){
+  if(S.screen!=='quiz')return; stopTimer(); if(dlg.open)dlg.close();
+  S.screen='result'; actions.hidden=true;
+  const n=S.qs.length, s=S.qs.filter(isCorrect).length, p=Math.round(s/n*100);
+  const h=store.get('m6hist')||[]; h.unshift({d:new Date().toLocaleDateString('th-TH',{day:'numeric',month:'short'}),s,n,p}); store.set('m6hist',h.slice(0,10));
+  S.filter='wrong'; result();
+}
+function result(){
+  const n=S.qs.length, s=S.qs.filter(isCorrect).length, p=Math.round(s/n*100), pass=p>=75;
+  const bycat={}; S.qs.forEach(q=>{const c=bycat[q.cat]=bycat[q.cat]||{t:0,c:0};c.t++;if(isCorrect(q))c.c++});
+  const list=S.qs.filter(q=>S.filter==='all'||!isCorrect(q));
+  app.innerHTML=`
+  <h1>ผลการสอบ</h1>
+  <div class="card"><div class="score"><b>${p}%</b><span>${s} / ${n} ข้อ</span></div>
+  <span class="verdict ${pass?'pass':'fail'}">${pass?'✓ ผ่านเกณฑ์ 75%':'✕ ยังไม่ถึงเกณฑ์ 75%'}</span></div>
+  <div class="card"><h2>แยกตามหมวด</h2>${Object.keys(bycat).map(k=>{const c=bycat[k],pc=Math.round(c.c/c.t*100);return `<div class="cat"><span>${CATS[k]}</span><span style="font-variant-numeric:tabular-nums">${c.c}/${c.t}</span><div class="meter"><i class="${pc<75?'low':''}" style="width:${pc}%"></i></div></div>`}).join('')}</div>
+  <div class="resbtns"><button class="btn primary" id="retry" ${S.qs.every(isCorrect)?'disabled':''}>ทำเฉพาะข้อที่ผิดอีกครั้ง</button><button class="btn" id="again">ตั้งค่าและเริ่มใหม่</button></div>
+  <h2>ทบทวนข้อสอบ</h2>
+  <div class="tabs" role="group"><button data-f="wrong" aria-pressed="${S.filter==='wrong'}">ข้อที่ผิดหรือไม่ได้ตอบ (${S.qs.filter(q=>!isCorrect(q)).length})</button><button data-f="all" aria-pressed="${S.filter==='all'}">ทั้งหมด (${n})</button></div>
+  ${list.length?list.map(reviewItem).join(''):'<p class="card">ถูกทุกข้อเลย</p>'}
+  <footer>เลขหน้า = “Page N of 643” ของหนังสือ Module 6</footer>`;
+  window.scrollTo(0,0);
+}
+function reviewItem(q){
+  const ok=isCorrect(q), na=!answered(q);
+  const cls=ok?'ok':(na?'na':'bad'), badge=ok?'<span class="badge ok">ถูก</span>':(na?'<span class="badge na">ไม่ได้ตอบ</span>':'<span class="badge bad">ผิด</span>');
+  let you='',corr='';
+  if(q.type==='mc'){
+    you=na?'ไม่ได้ตอบ':`${LET[S.ans[q.id]]}) ${q.opts[S.ans[q.id]]}`; corr=`${LET[q.ans]}) ${q.opts[q.ans]}`;
+  }else{ you=na?'ไม่ได้ประเมิน':(S.ans[q.id]==='right'?'ประเมินว่าตอบถูก':'ประเมินว่าตอบไม่ถูก'); corr=q.a }
+  return `<article class="rv ${cls}">${badge}<span class="tag">หน้า ${q.page}</span><p class="q" style="margin-top:.5rem">${q.q}</p>
+  ${ok?'':`<p class="ln you bad">คำตอบของคุณ: <b>${you}</b></p>`}<p class="ln corr">คำตอบที่ถูก: <b>${corr}</b></p><p class="ex">${q.exp}</p>${tr(q)}</article>`;
+}
+document.addEventListener('click',e=>{
+  const t=e.target.closest('button'); if(!t)return;
+  if(t.dataset.close!==undefined){dlg.close();return}
+  if(t.dataset.finish!==undefined){finish();return}
+  if(t.dataset.g!==undefined){dlg.close();go(+t.dataset.g);return}
+  if(S.screen==='quiz'){
+    const q=S.qs[S.idx];
+    if(t.classList.contains('opt')){ if(S.cfg.instant&&answered(q))return; S.ans[q.id]=+t.dataset.i; render(); return }
+    if(t.id==='reveal'){S.rev[q.id]=true;render();return}
+    if(t.dataset.self){S.ans[q.id]=t.dataset.self;render();return}
+    if(t.id==='prev')go(S.idx-1); if(t.id==='next')go(S.idx+1);
+    if(t.id==='flag'){S.flags[q.id]=!S.flags[q.id];render()}
+    if(t.id==='list')openList(); if(t.id==='submit')confirmSubmit();
+    if(t.id==='exit'){dlg.innerHTML=`<h2>ออกจากข้อสอบ</h2><p>ความคืบหน้าจะหายไป</p><div class="dlgbtns"><button class="btn" data-close>ทำต่อ</button><button class="btn primary" id="quit">ออก</button></div>`;dlg.showModal()}
+  }
+  if(t.id==='quit'){dlg.close();start()}
+  if(S.screen==='result'){
+    if(t.dataset.f){S.filter=t.dataset.f;result()}
+    if(t.id==='again')start();
+    if(t.id==='retry'){const ids=S.qs.filter(q=>!isCorrect(q)).map(q=>q.id);begin(Object.assign({},S.cfg,{timer:false}),ids)}
+  }
+});
+document.addEventListener('keydown',e=>{
+  if(S.screen!=='quiz'||dlg.open||e.target.matches('input,select,textarea'))return;
+  const q=S.qs[S.idx]; const k=e.key.toLowerCase();
+  if(q.type==='mc'&&['a','b','c','d'].includes(k)&&LET.indexOf(k)<q.opts.length&&!(S.cfg.instant&&answered(q))){S.ans[q.id]=LET.indexOf(k);render()}
+  if(k==='arrowright'&&S.idx<S.qs.length-1)go(S.idx+1);
+  if(k==='arrowleft'&&S.idx>0)go(S.idx-1);
+});
+window.addEventListener('beforeunload',e=>{if(S.screen==='quiz'&&Object.keys(S.ans).length){e.preventDefault();e.returnValue=''}});
+start();
+</script>
+</body>
+</html>
